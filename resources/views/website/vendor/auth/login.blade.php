@@ -11,15 +11,15 @@
 					<div class="t1">Welcome back</div>
 					<div class="pad">
 						<div class="box-error">Your password is incorrect or this account doesn’t exist. Please try again.</div>
-						<form action="{{ URL::to('/vendor/appointments/upcoming') }}">
+						<form action="{{ URL::to('/vendor/step1') }}">
 							<div class="form-group">
 								<label>Email address<span class="red">*</span></label>
-								<input class="form-control" type="text" name=""/>
+								<input class="form-control" type="text" name="" required/>
 								<div class="required">Please input a valid email address</div>
 							</div>
 							<div class="form-group mb8">
 								<label>Password<span class="red">*</span></label>
-								<input class="form-control" type="password" name=""/>
+								<input class="form-control" type="password" name="" required/>
 								<div class="required">This field is required</div>
 							</div>
 							<div class="link">
@@ -48,28 +48,25 @@
 	$(document).ready(function() {
 		$('.hdr-member').show();
 
-		$('.box-name').hide();
-
-		$('.menu').hide();
-
-		$('footer').hide();
+		$('.box-account, .menu, footer').hide();
 
 		$('.box-menu').html('Vendor');
 	});
 
 	document.addEventListener('DOMContentLoaded', () => {
 	    const form = document.querySelector('form');
-	    const inputs = form.querySelectorAll('.form-control');
+	    const requiredFields = form.querySelectorAll('[required]');
 	    const submitButton = form.querySelector('button[type="submit"]');
 
-	    function checkInputs() {
-	        const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
-	        submitButton.disabled = !allFilled;
+	    function checkRequiredFields() {
+	        const allRequiredFilled = Array.from(requiredFields).every(field => field.value.trim() !== '');
+	        submitButton.disabled = !allRequiredFilled;
 	    }
-	    inputs.forEach(input => {
-	        input.addEventListener('input', checkInputs);
+
+	    requiredFields.forEach(field => {
+	        field.addEventListener('input', checkRequiredFields);
 	    });
-	    checkInputs();
+	    checkRequiredFields();
 	});
 </script>
 @endsection

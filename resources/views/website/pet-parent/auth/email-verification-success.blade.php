@@ -24,11 +24,7 @@
 	$(document).ready(function() {
 		$('.hdr-member').show();
 
-		$('.box-name').hide();
-
-		$('.menu').hide();
-
-		$('footer').hide();
+		$('.menu, footer').hide();
 
 		$('.box-menu').html('Pet Parent');
 	});

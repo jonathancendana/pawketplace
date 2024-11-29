@@ -20,7 +20,7 @@
 								<div class="col-md-6">
 									<div class="form-group">
 										<label>Name<span class="red">*</span></label>
-										<input class="form-control" type="text" name=""/>
+										<input class="form-control" type="text" name="" required />
 										<div class="required">This field is required</div>
 									</div>
 								</div>
@@ -37,7 +37,7 @@
 					                            </div>
 											</div>
 											<div class="col-7">
-												<input class="form-control" type="text" name=""/>
+												<input class="form-control" type="text" name="" required />
 											</div>
 										</div>
 										<div class="required">Please input a valid contact no.</div>
@@ -46,21 +46,21 @@
 							</div>
 							<div class="form-group">
 								<label>Email address<span class="red">*</span></label>
-								<input class="form-control" type="email" name=""/>
+								<input class="form-control" type="email" name="" required />
 								<div class="required">Please input a valid email address</div>
 							</div>
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
 										<label>Password<span class="red">*</span></label>
-										<input class="form-control" type="password" name=""/>
+										<input class="form-control" type="password" name="" required />
 										<div class="required">This field is required</div>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
 										<label>Re-enter password<span class="red">*</span></label>
-										<input class="form-control" type="password" name=""/>
+										<input class="form-control" type="password" name="" required />
 										<div class="required">Passwords do not match.</div>
 									</div>
 								</div>
@@ -90,11 +90,7 @@
 	$(document).ready(function() {
 		$('.hdr-member').show();
 
-		$('.box-name').hide();
-
-		$('.menu').hide();
-
-		$('footer').hide();
+		$('.menu, footer').hide();
 
 		$('.box-menu').html('Pet Parent');
 
@@ -106,17 +102,18 @@
 
 	document.addEventListener('DOMContentLoaded', () => {
 	    const form = document.querySelector('form');
-	    const inputs = form.querySelectorAll('.form-control');
+	    const requiredFields = form.querySelectorAll('[required]');
 	    const submitButton = form.querySelector('button[type="submit"]');
 
-	    function checkInputs() {
-	        const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
-	        submitButton.disabled = !allFilled;
+	    function checkRequiredFields() {
+	        const allRequiredFilled = Array.from(requiredFields).every(field => field.value.trim() !== '');
+	        submitButton.disabled = !allRequiredFilled;
 	    }
-	    inputs.forEach(input => {
-	        input.addEventListener('input', checkInputs);
+
+	    requiredFields.forEach(field => {
+	        field.addEventListener('input', checkRequiredFields);
 	    });
-	    checkInputs();
+	    checkRequiredFields();
 	});
 </script>
 @endsection

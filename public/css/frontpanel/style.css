@@ -17897,6 +17897,9 @@ ul.l-btn li a:hover {
     line-height: 35px;
     font-size: 18px;
   }
+  header.header .hdr-member .box-account .img-account img {
+    width: 35px;
+  }
 
   .search {
     width: 300px;
@@ -18268,6 +18271,19 @@ ul.l-btn li a:hover {
     line-height: 30px;
     width: 30px;
     height: 30px;
+  }
+  header.header .hdr-member .box-account .img-account img {
+    width: 30px;
+  }
+  header.header .hdr-member .box-account ul.drop-account {
+    min-width: 130px;
+    left: inherit;
+    right: 0;
+    top: calc(100% + 25px);
+  }
+  header.header .hdr-member .box-account ul.drop-account li a {
+    font-size: 12px;
+    padding: 7px 15px;
   }
 
   .pad-content {

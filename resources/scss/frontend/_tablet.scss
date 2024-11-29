@@ -6,6 +6,13 @@
 				font-size: 13px;
 				padding: 5px 15px 4px;
 			}
+			.box-account {
+                .img-account {
+                    img {
+                        width: 35px;
+                    }
+                }
+            }
 		}
 	    .hdr-global {
 	        height: 60px;
@@ -402,5 +409,10 @@
 	            }
 	        }
 	    }
+	}
+	ul.box-step {
+		li {
+			width: 179px;
+		}
 	}
 }

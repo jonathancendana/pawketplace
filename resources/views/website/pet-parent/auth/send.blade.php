@@ -32,28 +32,9 @@
 	$(document).ready(function() {
 		$('.hdr-member').show();
 
-		$('.box-name').hide();
-
-		$('.menu').hide();
-
-		$('footer').hide();
+		$('.menu, footer').hide();
 
 		$('.box-menu').html('Pet Parent');
-	});
-
-	document.addEventListener('DOMContentLoaded', () => {
-	    const form = document.querySelector('form');
-	    const inputs = form.querySelectorAll('.form-control');
-	    const submitButton = form.querySelector('button[type="submit"]');
-
-	    function checkInputs() {
-	        const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
-	        submitButton.disabled = !allFilled;
-	    }
-	    inputs.forEach(input => {
-	        input.addEventListener('input', checkInputs);
-	    });
-	    checkInputs();
 	});
 </script>
 @endsection

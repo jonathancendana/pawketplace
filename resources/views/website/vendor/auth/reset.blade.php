@@ -11,12 +11,12 @@
 						<form action="{{ URL::to('/vendor/reset-success') }}">
 							<div class="form-group">
 								<label>New password<span class="red">*</span></label>
-								<input class="form-control" type="password" name=""/>
+								<input class="form-control" type="password" name="" required />
 								<div class="required">This field is required</div>
 							</div>
 							<div class="form-group">
 								<label>Re-enter new password<span class="red">*</span></label>
-								<input class="form-control" type="password" name=""/>
+								<input class="form-control" type="password" name="" required />
 								<div class="required">Passwords do not match.</div>
 							</div>
 							<div class="link-btn">
@@ -35,28 +35,25 @@
 	$(document).ready(function() {
 		$('.hdr-member').show();
 
-		$('.box-name').hide();
-
-		$('.menu').hide();
-
-		$('footer').hide();
+		$('.box-account, .menu, footer').hide();
 
 		$('.box-menu').html('Vendor');
 	});
 
 	document.addEventListener('DOMContentLoaded', () => {
 	    const form = document.querySelector('form');
-	    const inputs = form.querySelectorAll('.form-control');
+	    const requiredFields = form.querySelectorAll('[required]');
 	    const submitButton = form.querySelector('button[type="submit"]');
 
-	    function checkInputs() {
-	        const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
-	        submitButton.disabled = !allFilled;
+	    function checkRequiredFields() {
+	        const allRequiredFilled = Array.from(requiredFields).every(field => field.value.trim() !== '');
+	        submitButton.disabled = !allRequiredFilled;
 	    }
-	    inputs.forEach(input => {
-	        input.addEventListener('input', checkInputs);
+
+	    requiredFields.forEach(field => {
+	        field.addEventListener('input', checkRequiredFields);
 	    });
-	    checkInputs();
+	    checkRequiredFields();
 	});
 </script>
 @endsection

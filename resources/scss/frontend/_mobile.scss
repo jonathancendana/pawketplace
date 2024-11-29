@@ -1,6 +1,40 @@
 @media (max-width: 767px) {
 	.form-group {
 		margin-bottom: 25px;
+		label {
+			font-size: 13px;
+			line-height: 18px;
+			margin-bottom: 5px;
+		}
+		.text {
+	        font-size: 13px;
+	        line-height: 18px;
+	    }
+	}
+	ul.l-pdf {
+	    li {
+	    	margin-bottom: 3px;
+	        img {
+	            margin-right: 5px;
+	            width: 18px;
+	        }
+	        a {
+	        	font-size: 13px;
+	        	line-height: 18px;
+	            &:before {
+	                content: '';
+	                width: 100%;
+	                height: 0.5px;
+	                background: $purple;
+	                position: absolute;
+	                bottom: 4px;
+	                left: 0;
+	            }
+	            &:hover {
+	                color: $purple2;
+	            }
+	        }
+	    }
 	}
 	header {
 		.row {
@@ -63,6 +97,25 @@
 				margin-left: 3px;
 				min-width: auto;
 			}
+			.box-account {
+                .img-account {
+                    img {
+                        width: 30px;
+                    }
+                }
+                ul.drop-account {
+                    min-width: 130px;
+                    left: inherit;
+                    right: 0;
+                    top: calc(100% + 25px);
+                    li {
+                        a {
+                            font-size: 12px;
+                            padding: 7px 15px;
+                        }
+                    }
+                }
+            }
 		}
 	    .hdr-global {
 	        height: auto;
@@ -621,4 +674,38 @@
 	        }
 	    }
 	}
+	ul.box-step {
+		li {
+			width: 29%;
+		}
+	}
+	.form-control {
+		font-size: 13px;
+		line-height: 18px;
+	}
+	.css-checkbox {
+		.checkmark {
+			top: -1px;
+		}
+		.text {
+			font-size: 13px;
+			line-height: 18px;
+		}
+	}
+	.select {
+	    .select2-container {
+	        .select2-selection--single {
+	            .select2-selection__rendered {
+	                font-size: 13px;
+	                line-height: 18px;
+	            }
+	        }
+	    }
+	}
+	.box-info-step {
+        padding: 10px;
+        margin-bottom: 15px;
+        font-size: 12px;
+        line-height: 17px;
+    }
 }

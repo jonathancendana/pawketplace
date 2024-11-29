@@ -283,6 +283,25 @@
                     width: 30px;
                     height: 30px;
                 }
+                .box-account {
+                    .img-account {
+                        img {
+                            width: 30px;
+                        }
+                    }
+                    ul.drop-account {
+                        min-width: 130px;
+                        left: inherit;
+                        right: 0;
+                        top: calc(100% + 25px);
+                        li {
+                            a {
+                                font-size: 12px;
+                                padding: 7px 15px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

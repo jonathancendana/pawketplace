@@ -157,16 +157,16 @@
     <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
     <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
     <script>
-        $('.img-account').click(function () {
-            $('.drop-account').toggleClass('open');
-        });
-        $("html").click(function(a) {
-            if (!$(a.target).parents().is(".box-account")) {
-                $('.drop-account').removeClass('open');
-            }
-        });
-
         $(function() {
+            $('.img-account').click(function () {
+                $('.drop-account').toggleClass('open');
+            });
+            $("html").click(function(a) {
+                if (!$(a.target).parents().is(".box-account")) {
+                    $('.drop-account').removeClass('open');
+                }
+            });
+            
             var route_prefix = "url-to-filemanager";
             $('.lfm').filemanager('image', {
                 route_prefix

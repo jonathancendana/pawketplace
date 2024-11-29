@@ -123,7 +123,14 @@
                                 <div class="box-menu"></div>
                             </div>
                             <div class="col-3 text-end">
-                                <div class="box-name">J</div>
+                                <!-- <div class="box-name">J</div> -->
+                                <div class="box-account">
+                                    <div class="img-account"><img src="{{ asset('assets/img/frontpanel/account.svg') }}" alt="" title=""/></div>
+                                    <ul class="drop-account">
+                                        <li><a href="#">View profile</a></li>
+                                        <li><a href="{{ URL::to('/') }}">Log out</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -172,6 +179,15 @@
 @yield('js')
 <script type="text/javascript">
     $(document).ready(function() {
+        $('.img-account').click(function () {
+            $('.drop-account').toggleClass('open');
+        });
+        $("html").click(function(a) {
+            if (!$(a.target).parents().is(".box-account")) {
+                $('.drop-account').removeClass('open');
+            }
+        });
+        
         document.addEventListener('DOMContentLoaded', function () {
             const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
             dropdownToggles.forEach((toggle) => {

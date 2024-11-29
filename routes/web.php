@@ -96,6 +96,24 @@ Route::get('/vendor/register-created', function () {
 Route::get('/vendor/email-verification-success', function () {
     return view('website/vendor/auth/email-verification-success');
 });
+Route::get('/vendor/step1', function () {
+    return view('website/vendor/auth/step1');
+});
+Route::get('/vendor/step2-individual', function () {
+    return view('website/vendor/auth/step2-individual');
+});
+Route::get('/vendor/step2-company', function () {
+    return view('website/vendor/auth/step2-company');
+});
+Route::get('/vendor/step3', function () {
+    return view('website/vendor/auth/step3');
+});
+Route::get('/vendor/step4', function () {
+    return view('website/vendor/auth/step4');
+});
+Route::get('/vendor/pending-admin', function () {
+    return view('website/vendor/auth/pending-admin');
+});
 /* Appointments  */
 Route::get('vendor/appointments/upcoming', function () {
     return view('website.vendor.appointments.upcoming');

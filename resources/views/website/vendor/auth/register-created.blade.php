@@ -18,9 +18,7 @@
 							<button class="hvr-button white" type="button">Resend verification email</button>
 						</a>
 					</div>
-					<div class="link-text">
-						Need help? <a href="{{ URL::to('/contact-us') }}">Contact us</a>
-					</div>
+					<div class="link-text">Need help? <a href="{{ URL::to('/contact-us') }}">Contact us</a></div>
 				</div>
 			</div>
 		</div>
@@ -54,11 +52,7 @@
 	$(document).ready(function() {
 		$('.hdr-member').show();
 
-		$('.box-name').hide();
-
-		$('.menu').hide();
-
-		$('footer').hide();
+		$('.box-account, .menu, footer').hide();
 
 		$('.box-menu').html('Vendor');
 	});
