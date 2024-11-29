@@ -3,7 +3,7 @@
 @section('content')
 	<div class="auth auth200">
 		<div class="abs">
-			<img src="{{ asset('assets/img/bg-auth.png') }}" alt="" title="">
+			<img src="{{ asset('assets/img/bg-auth2.png') }}" alt="" title="">
 		</div>
 		<div class="container">
 			<div class="row justify-content-center">
@@ -11,7 +11,7 @@
 					<div class="t1 mb20">Forgot password?</div>
 					<div class="pad">
 						<div class="desc">Enter the email address associated with your account and we will send an email to you to reset your password.</div>
-						<form action="{{ URL::to('/pet-parent/send') }}">
+						<form action="{{ URL::to('/vendor/send') }}">
 							<div class="form-group">
 								<label>Email address<span class="red">*</span></label>
 								<input class="form-control" type="email" name=""/>
@@ -22,7 +22,7 @@
 							</div>
 						</form>
 						<div class="link-text">
-							<a href="{{ URL::to('/pet-parent/login') }}">Back to Log in</a>
+							<a href="{{ URL::to('/vendor/login') }}">Back to Log in</a>
 						</div>
 					</div>
 				</div>
@@ -42,7 +42,7 @@
 
 		$('footer').hide();
 
-		$('.box-menu').html('Pet Parent');
+		$('.box-menu').html('Vendor');
 	});
 
 	document.addEventListener('DOMContentLoaded', () => {

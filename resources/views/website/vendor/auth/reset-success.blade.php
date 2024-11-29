@@ -9,7 +9,7 @@
 					<div class="t1 mb20">Password reset successful</div>
 					<div class="desc">You can now log in to book vet visits and track your pet’s expenses.</div>
 					<div class="link-btn">
-						<a href="{{ URL::to('/pet-parent/login') }}">
+						<a href="{{ URL::to('/vendor/login') }}">
 							<button class="hvr-button" type="button">Back to log in</button>
 						</a>
 					</div>
@@ -30,7 +30,7 @@
 
 		$('footer').hide();
 
-		$('.box-menu').html('Pet Parent');
+		$('.box-menu').html('Vendor');
 	});
 </script>
 @endsection

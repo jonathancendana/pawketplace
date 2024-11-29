@@ -3,7 +3,7 @@
 @section('content')
 	<div class="auth">
 		<div class="abs">
-			<img src="{{ asset('assets/img/bg-auth.png') }}" alt="" title="">
+			<img src="{{ asset('assets/img/bg-auth2.png') }}" alt="" title="">
 		</div>
 		<div class="container">
 			<div class="row justify-content-center">
@@ -11,7 +11,7 @@
 					<div class="t1">Welcome back</div>
 					<div class="pad">
 						<div class="box-error">Your password is incorrect or this account doesn’t exist. Please try again.</div>
-						<form action="{{ URL::to('/pet-parent/dashboard') }}">
+						<form action="{{ URL::to('/vendor/appointments/upcoming') }}">
 							<div class="form-group">
 								<label>Email address<span class="red">*</span></label>
 								<input class="form-control" type="text" name=""/>
@@ -23,13 +23,13 @@
 								<div class="required">This field is required</div>
 							</div>
 							<div class="link">
-								<a href="{{ URL::to('/pet-parent/forgot') }}">Forgot password?</a>
+								<a href="{{ URL::to('/vendor/forgot') }}">Forgot password?</a>
 							</div>
 							<div class="link-btn">
 								<button class="hvr-button" type="submit" disabled>Login in</button>
 							</div>
 						</form>
-						<div class="link-text">Do not have an account yet? <a href="{{ URL::to('/pet-parent/register') }}">Create an account</a>.</div>
+						<div class="link-text">Do not have an account yet? <a href="{{ URL::to('/vendor/register') }}">Create an account</a>.</div>
 						<div class="or"><span>Or log in with</span></div>
 						<ul class="l-soc">
 							<li><a href="#"><img src="{{ asset('assets/img/apple.png') }}" alt="" title=""></a></li>
@@ -54,7 +54,7 @@
 
 		$('footer').hide();
 
-		$('.box-menu').html('Pet Parent');
+		$('.box-menu').html('Vendor');
 	});
 
 	document.addEventListener('DOMContentLoaded', () => {

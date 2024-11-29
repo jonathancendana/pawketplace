@@ -3,27 +3,23 @@
 @section('content')
 	<div class="auth auth200">
 		<div class="abs">
-			<img src="{{ asset('assets/img/bg-auth.png') }}" alt="" title="">
+			<img src="{{ asset('assets/img/bg-auth2.png') }}" alt="" title="">
 		</div>
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 offset-md-6 col-lg-5 offset-lg-7">
-					<div class="t1 mb20">Forgot password?</div>
-					<div class="pad">
-						<div class="desc">Enter the email address associated with your account and we will send an email to you to reset your password.</div>
-						<form action="{{ URL::to('/pet-parent/send') }}">
-							<div class="form-group">
-								<label>Email address<span class="red">*</span></label>
-								<input class="form-control" type="email" name=""/>
-								<div class="required">Please input a valid email address</div>
-							</div>
-							<div class="link-btn">
-								<button class="hvr-button" type="submit">Send Email</button>
-							</div>
-						</form>
-						<div class="link-text">
-							<a href="{{ URL::to('/pet-parent/login') }}">Back to Log in</a>
-						</div>
+					<div class="t1 mb20">Password reset email sent!</div>
+					<div class="desc">
+						<div class="mb20">A password reset email has been sent if there’s a registered account with that email.</div>
+						<div>Please check your email inbox and click the link to change your password. If you don’t see it, you may need to check your spam folder.</div>
+					</div>
+					<div class="link-btn">
+						<a href="{{ URL::to('/vendor/login') }}">
+							<button class="hvr-button white" type="button">Back to Log in</button>
+						</a>
+					</div>
+					<div class="link-text">
+						Need help? <a href="{{ URL::to('/contact-us') }}">Contact us</a>
 					</div>
 				</div>
 			</div>
@@ -42,7 +38,7 @@
 
 		$('footer').hide();
 
-		$('.box-menu').html('Pet Parent');
+		$('.box-menu').html('Vendor');
 	});
 
 	document.addEventListener('DOMContentLoaded', () => {

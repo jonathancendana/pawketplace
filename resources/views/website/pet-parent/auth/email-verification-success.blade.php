@@ -9,7 +9,7 @@
 					<div class="t1 mb20">Email verification successful</div>
 					<div class="desc">We’re excited to have you here! You can now log in to book vet visits and track your pet’s expenses.</div>
 					<div class="link-btn">
-						<a href="{{ URL::to('/login') }}">
+						<a href="{{ URL::to('/pet-parent/login') }}">
 							<button class="hvr-button" type="button">Back to log in</button>
 						</a>
 					</div>
@@ -29,6 +29,8 @@
 		$('.menu').hide();
 
 		$('footer').hide();
+
+		$('.box-menu').html('Pet Parent');
 	});
 </script>
 @endsection

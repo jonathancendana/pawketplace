@@ -1,29 +1,28 @@
 @extends('website.layout')
 
 @section('content')
-	<div class="auth auth200">
-		<div class="abs">
-			<img src="{{ asset('assets/img/bg-auth.png') }}" alt="" title="">
-		</div>
+	<div class="auth">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-md-6 offset-md-6 col-lg-5 offset-lg-7">
-					<div class="t1 mb20">Forgot password?</div>
+				<div class="col-lg-4">
+					<div class="t1 mb20">Reset password</div>
+					<div class="desc">Create a new password for your account.</div>
 					<div class="pad">
-						<div class="desc">Enter the email address associated with your account and we will send an email to you to reset your password.</div>
-						<form action="{{ URL::to('/pet-parent/send') }}">
+						<form action="{{ URL::to('/vendor/reset-success') }}">
 							<div class="form-group">
-								<label>Email address<span class="red">*</span></label>
-								<input class="form-control" type="email" name=""/>
-								<div class="required">Please input a valid email address</div>
+								<label>New password<span class="red">*</span></label>
+								<input class="form-control" type="password" name=""/>
+								<div class="required">This field is required</div>
+							</div>
+							<div class="form-group">
+								<label>Re-enter new password<span class="red">*</span></label>
+								<input class="form-control" type="password" name=""/>
+								<div class="required">Passwords do not match.</div>
 							</div>
 							<div class="link-btn">
-								<button class="hvr-button" type="submit">Send Email</button>
+								<button class="hvr-button" type="submit" disabled>Reset password</button>
 							</div>
 						</form>
-						<div class="link-text">
-							<a href="{{ URL::to('/pet-parent/login') }}">Back to Log in</a>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -42,7 +41,7 @@
 
 		$('footer').hide();
 
-		$('.box-menu').html('Pet Parent');
+		$('.box-menu').html('Vendor');
 	});
 
 	document.addEventListener('DOMContentLoaded', () => {

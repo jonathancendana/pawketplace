@@ -70,32 +70,56 @@ Route::get('pet-parent/dashboard2', function () {
 /* END PET PARENT */
 
 
-
 /* VENDOR */
+/* Auth */
+Route::get('/vendor/login', function () {
+    return view('website/vendor/auth/login');
+});
+Route::get('/vendor/forgot', function () {
+    return view('website/vendor/auth/forgot');
+});
+Route::get('/vendor/send', function () {
+    return view('website/vendor/auth/send');
+});
+Route::get('/vendor/reset', function () {
+    return view('website/vendor/auth/reset');
+});
+Route::get('/vendor/reset-success', function () {
+    return view('website/vendor/auth/reset-success');
+});
+Route::get('/vendor/register', function () {
+    return view('website/vendor/auth/register');
+});
+Route::get('/vendor/register-created', function () {
+    return view('website/vendor/auth/register-created');
+});
+Route::get('/vendor/email-verification-success', function () {
+    return view('website/vendor/auth/email-verification-success');
+});
 /* Appointments  */
 Route::get('vendor/appointments/upcoming', function () {
-    return view('vendor.appointments.upcoming');
+    return view('website.vendor.appointments.upcoming');
 });
 /* Services & Pricing  */
 Route::get('vendor/services-pricing', function () {
-    return view('vendor.services-pricing.index');
+    return view('website.vendor.services-pricing.index');
 });
 Route::get('vendor/services-pricing/view', function () {
-    return view('vendor.services-pricing.view');
+    return view('website.vendor.services-pricing.view');
 });
 Route::get('vendor/services-pricing/add', function () {
-    return view('vendor.services-pricing.add');
+    return view('website.vendor.services-pricing.add');
 });
 Route::get('vendor/services-pricing/edit', function () {
-    return view('vendor.services-pricing.edit');
+    return view('website.vendor.services-pricing.edit');
 });
 /* FAQ  */
 Route::get('vendor/faq', function () {
-    return view('vendor.faq.index');
+    return view('website.vendor.faq.index');
 });
 /* Contact Us  */
 Route::get('vendor/contact-us', function () {
-    return view('vendor.contact-us.index');
+    return view('website.vendor.contact-us.index');
 });
 /* VENDOR */
 

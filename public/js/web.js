@@ -17,30 +17,6 @@ $(document).ready(function () {
         }
     });
 
-    // const inputs = document.querySelectorAll('.form-control');
-
-    // inputs.forEach(input => {
-    //     const bgFocus = input.previousElementSibling;
-
-    //     input.addEventListener('focus', () => {
-    //         bgFocus.style.display = 'block';
-    //     });
-
-    //     input.addEventListener('blur', () => {
-    //         bgFocus.style.display = 'none';
-    //     });
-    // });
-
-    $('.account a').click(function(event) { 
-        $('.box-account').slideToggle();
-    });
-
-    $("html").click(function(a) {
-        if (!$(a.target).parents().is(".account") && !$(a.target).is(".close-menu")) {
-            $('.box-account').slideUp();
-        }
-    });
-
     $('select.css-select').each(function(){
         var $this = $(this), numberOfOptions = $(this).children('option').length;
       
@@ -60,9 +36,6 @@ $(document).ready(function () {
                 text: $this.children('option').eq(i).text(),
                 rel: $this.children('option').eq(i).val()
             }).appendTo($list);
-            //if ($this.children('option').eq(i).is(':selected')){
-            //  $('li[rel="' + $this.children('option').eq(i).val() + '"]').addClass('is-selected')
-            //}
         }
       
         var $listItems = $list.children('li');

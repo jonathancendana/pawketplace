@@ -40,6 +40,8 @@
 		$('.menu').hide();
 
 		$('footer').hide();
+
+		$('.box-menu').html('Pet Parent');
 	});
 
 	document.addEventListener('DOMContentLoaded', () => {

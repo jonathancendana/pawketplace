@@ -120,7 +120,7 @@
                                         <img src="{{ asset('assets/img/logo3.png') }}" alt="" title="">
                                     </a>
                                 </div>
-                                <div class="box-menu">Pet Parent</div>
+                                <div class="box-menu"></div>
                             </div>
                             <div class="col-3 text-end">
                                 <div class="box-name">J</div>

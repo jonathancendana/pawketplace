@@ -3,7 +3,7 @@
 @section('content')
 	<div class="auth auth200">
 		<div class="abs">
-			<img src="{{ asset('assets/img/bg-auth.png') }}" alt="" title="">
+			<img src="{{ asset('assets/img/bg-auth2.png') }}" alt="" title="">
 		</div>
 		<div class="container">
 			<div class="row justify-content-center">
@@ -60,7 +60,7 @@
 
 		$('footer').hide();
 
-		$('.box-menu').html('Pet Parent');
+		$('.box-menu').html('Vendor');
 	});
 </script>
 @endsection

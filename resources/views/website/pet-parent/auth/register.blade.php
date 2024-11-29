@@ -96,6 +96,8 @@
 
 		$('footer').hide();
 
+		$('.box-menu').html('Pet Parent');
+
 		$('.css-select').select2({
             allowClear: true,
             minimumResultsForSearch: Infinity
