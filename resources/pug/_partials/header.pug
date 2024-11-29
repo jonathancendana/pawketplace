@@ -1,0 +1,258 @@
+header.header.header-sticky.mb-4
+  .container-fluid
+    button.header-toggler.px-md-0.me-md-3(type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()")
+      svg.icon.icon-lg
+        use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-menu")
+        |
+    a.header-brand.d-md-none(href="#")
+      svg(width="118" height="46" alt="CoreUI Logo")
+        use(xlink:href="assets/brand/coreui.svg#full")
+        |
+    ul.header-nav.d-none.d-md-flex
+      li.nav-item
+        a.nav-link(href="#") Dashboard
+      li.nav-item
+        a.nav-link(href="#") Users
+      li.nav-item
+        a.nav-link(href="#") Settings
+    nav.header-nav.ms-auto.me-4
+      .btn-group(role='group' aria-label='Basic checkbox toggle button group')
+        input#btn-light-theme.btn-check(type='radio' name='theme-switch' autocomplete='off' value="light" onchange="handleThemeChange(this)")
+        label.btn.btn-primary(for='btn-light-theme')
+          svg.icon
+            use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-sun")
+        input#btn-dark-theme.btn-check(type='radio' name='theme-switch' autocomplete='off' value="dark" onchange="handleThemeChange(this)")
+        label.btn.btn-primary(for='btn-dark-theme')
+          svg.icon
+            use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-moon")
+    ul.header-nav.me-3
+      li.nav-item.dropdown.d-md-down-none
+        a.nav-link(data-coreui-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
+          svg.icon.icon-lg.my-1.mx-2
+            use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-bell")
+          span.badge.rounded-pill.position-absolute.top-0.end-0.bg-danger-gradient 5
+        .dropdown-menu.dropdown-menu-end.dropdown-menu-lg.pt-0
+          .dropdown-header.bg-light(class='dark:bg-white dark:bg-opacity-10')
+            strong You have 5 notifications
+          a.dropdown-item(href='#')
+            svg.icon.me-2.text-success
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-user-follow")
+            |  New user registered
+          a.dropdown-item(href='#')
+            svg.icon.me-2.text-danger
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-user-unfollow")
+            |  User deleted
+          a.dropdown-item(href='#')
+            svg.icon.me-2.text-info
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-chart")
+            |  Sales report is ready
+          a.dropdown-item(href='#')
+            svg.icon.me-2.text-success
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-basket")
+            |  New client
+          a.dropdown-item(href='#')
+            svg.icon.me-2.text-warning
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-speedometer")
+            |  Server overloaded
+          .dropdown-header.bg-light(class='dark:bg-white dark:bg-opacity-10')
+            strong Server
+          a.dropdown-item.d-block(href='#')
+            .text-uppercase.mb-1
+              small
+                b CPU Usage
+            span.progress.progress-thin
+              .progress-bar.bg-info(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+            small.text-medium-emphasis 348 Processes. 1/4 Cores.
+          a.dropdown-item.d-block(href='#')
+            .text-uppercase.mb-1
+              small
+                b Memory Usage
+            span.progress.progress-thin
+              .progress-bar.bg-warning(role='progressbar', style='width: 70%', aria-valuenow='70', aria-valuemin='0', aria-valuemax='100')
+            small.text-medium-emphasis 11444GB/16384MB
+          a.dropdown-item.d-block(href='#')
+            .text-uppercase.mb-1
+              small
+                b SSD 1 Usage
+            span.progress.progress-thin
+              .progress-bar.bg-danger(role='progressbar', style='width: 95%', aria-valuenow='95', aria-valuemin='0', aria-valuemax='100')
+            small.text-medium-emphasis 243GB/256GB
+      li.nav-item.dropdown.d-md-down-none
+        a.nav-link(data-coreui-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
+          svg.icon.icon-lg.my-1.mx-2
+            use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-list-rich")
+          span.badge.rounded-pill.position-absolute.top-0.end-0.bg-warning-gradient 5
+        .dropdown-menu.dropdown-menu-end.dropdown-menu-lg.pt-0
+          .dropdown-header.bg-light(class='dark:bg-white dark:bg-opacity-10')
+            strong You have 5 pending tasks
+          a.dropdown-item.d-block(href='#')
+            .small.mb-1
+              | Upgrade NPM &amp; Bower
+              span.float-end
+                strong 0%
+            span.progress.progress-thin
+              .progress-bar.bg-info(role='progressbar', style='width: 0%', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100')
+          a.dropdown-item.d-block(href='#')
+            .small.mb-1
+              | ReactJS Version
+              span.float-end
+                strong 25%
+            span.progress.progress-thin
+              .progress-bar.bg-danger(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+          a.dropdown-item.d-block(href='#')
+            .small.mb-1
+              | VueJS Version
+              span.float-end
+                strong 50%
+            span.progress.progress-thin
+              .progress-bar.bg-warning(role='progressbar', style='width: 50%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+          a.dropdown-item.d-block(href='#')
+            .small.mb-1
+              | Add new layouts
+              span.float-end
+                strong 75%
+            span.progress.progress-thin
+              .progress-bar.bg-info(role='progressbar', style='width: 75%', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100')
+          a.dropdown-item.d-block(href='#')
+            .small.mb-1
+              | Angular 8 Version
+              span.float-end
+                strong 100%
+            span.progress.progress-thin
+              .progress-bar.bg-success(role='progressbar', style='width: 100%', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100')
+          a.dropdown-item.text-center.border-top(href='#')
+            strong View all tasks
+      li.nav-item.dropdown.d-md-down-none
+        a.nav-link(data-coreui-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
+          svg.icon.icon-lg.my-1.mx-2
+            use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-envelope-open")
+          span.badge.rounded-pill.position-absolute.top-0.end-0.bg-info-gradient 7
+        .dropdown-menu.dropdown-menu-end.dropdown-menu-lg.pt-0
+          .dropdown-header.bg-light(class='dark:bg-white dark:bg-opacity-10')
+            strong You have 4 messages
+          a.dropdown-item(href='#')
+            .message
+              .py-3.me-3.float-start
+                .avatar
+                  img.avatar-img(src='assets/img/avatars/7.jpg', alt='user@email.com')
+                  span.avatar-status.bg-success
+              div
+                small.text-medium-emphasis John Doe
+                small.text-medium-emphasis.float-end.mt-1 Just now
+              .text-truncate.font-weight-bold
+                span.text-danger !
+                |  Important message
+              .small.text-medium-emphasis.text-truncate
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...
+          a.dropdown-item(href='#')
+            .message
+              .py-3.me-3.float-start
+                .avatar
+                  img.avatar-img(src='assets/img/avatars/6.jpg', alt='user@email.com')
+                  span.avatar-status.bg-warning
+              div
+                small.text-medium-emphasis John Doe
+                small.text-medium-emphasis.float-end.mt-1 5 minutes ago
+              .text-truncate.font-weight-bold Lorem ipsum dolor sit amet
+              .small.text-medium-emphasis.text-truncate
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...
+          a.dropdown-item(href='#')
+            .message
+              .py-3.me-3.float-start
+                .avatar
+                  img.avatar-img(src='assets/img/avatars/5.jpg', alt='user@email.com')
+                  span.avatar-status.bg-danger
+              div
+                small.text-medium-emphasis John Doe
+                small.text-medium-emphasis.float-end.mt-1 1:52 PM
+              .text-truncate.font-weight-bold Lorem ipsum dolor sit amet
+              .small.text-medium-emphasis.text-truncate
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...
+          a.dropdown-item(href='#')
+            .message
+              .py-3.me-3.float-start
+                .avatar
+                  img.avatar-img(src='assets/img/avatars/4.jpg', alt='user@email.com')
+                  span.avatar-status.bg-info
+              div
+                small.text-medium-emphasis John Doe
+                small.text-medium-emphasis.float-end.mt-1 4:03 PM
+              .text-truncate.font-weight-bold Lorem ipsum dolor sit amet
+              .small.text-medium-emphasis.text-truncate
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...
+          a.dropdown-item.text-center.border-top(href='#')
+            strong View all messages
+    ul.header-nav.me-4
+      li.nav-item.dropdown.d-flex.align-items-center
+        a.nav-link.py-0(data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false")
+          .avatar.avatar-md
+            img.avatar-img(src="assets/img/avatars/8.jpg" alt="user@email.com")
+        .dropdown-menu.dropdown-menu-end.pt-0
+          .dropdown-header.bg-light.py-2(class='dark:bg-white dark:bg-opacity-10')
+            .fw-semibold Account
+          a.dropdown-item(href="#")
+            svg.icon.me-2
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-bell")
+              |
+            |  Updates
+            span.badge.badge-sm.bg-info-gradient.ms-2 42
+          a.dropdown-item(href="#")
+            svg.icon.me-2
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-envelope-open")
+              |
+            |  Messages
+            span.badge.badge-sm.badge-sm.bg-success.ms-2 42
+          a.dropdown-item(href="#")
+            svg.icon.me-2
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-task")
+              |
+            |  Tasks
+            span.badge.badge-sm.bg-danger-gradient.ms-2 42
+          a.dropdown-item(href="#")
+            svg.icon.me-2
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-comment-square")
+              |
+            |  Comments
+            span.badge.badge-sm.bg-warning-gradient.ms-2 42
+          .dropdown-header.bg-light.py-2(class='dark:bg-white dark:bg-opacity-10')
+            .fw-semibold Settings
+          a.dropdown-item(href="#")
+            svg.icon.me-2
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-user")
+              |
+            |  Profile
+          a.dropdown-item(href="#")
+            svg.icon.me-2
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-settings")
+              |
+            |  Settings
+          a.dropdown-item(href="#")
+            svg.icon.me-2
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-credit-card")
+              |
+            |  Payments
+            span.badge.badge-sm.bg-secondary-gradient.text-dark.ms-2 42
+          a.dropdown-item(href="#")
+            svg.icon.me-2
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-file")
+              |
+            |  Projects
+            span.badge.badge-sm.bg-primary-gradient.ms-2 42
+          .dropdown-divider
+          a.dropdown-item(href="#")
+            svg.icon.me-2
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-lock-locked")
+              |
+            |  Lock Account
+          a.dropdown-item(href="#")
+            svg.icon.me-2
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-account-logout")
+              |
+            |  Logout
+    button.header-toggler.px-md-0.me-md-3(type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#aside')).show()")
+      svg.icon.icon-lg
+        use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-applications-settings")
+  .header-divider
+  .container-fluid
+    block breadcrumb
+

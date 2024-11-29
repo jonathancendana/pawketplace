@@ -1,0 +1,106 @@
+extends ../../_layout/default.pug
+
+block scripts
+  // Plugins and scripts required by this view
+  script(src='js/loading-buttons.js')
+
+block canonical
+  link(rel='canonical' href='https://coreui.io/docs/components/loading-buttons/')
+
+block breadcrumb
+  +breadcrumb(['Home', 'Components', 'Buttons'], 'Loading Buttons')
+
+block view
+  +callout-custom
+    | Loading Button Component has been created as a replacemenet of the Ladda Buttons used in version 3.
+    br
+    br
+    | For more information how to use this component please visit the official 
+    a(href='https://coreui.io/docs/components/loading-buttons/' target='_blank') documentation of CoreUI library
+    | .
+  .card
+    .card-header
+      strong CoreUI Loading Buttons
+      a.badge.bg-danger-gradient.ms-2.text-decoration-none(href='https://coreui.io/pro/') CoreUI Pro Integration
+    .card-body
+      +example('https://coreui.io/docs/components/loading-buttons/')
+        .row.py-4.text-center
+          .col-md-2
+            button.btn.btn-primary.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000') Submit
+          .col-md-2
+            button.btn.btn-secondary.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000') Submit
+          .col-md-2
+            button.btn.btn-success.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000') Submit
+          .col-md-2
+            button.btn.btn-info.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000') Submit
+          .col-md-2
+            button.btn.btn-danger.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000') Submit
+          .col-md-2
+            button.btn.btn-warning.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000') Submit
+        .row.py-4.text-center
+          .col-md-2
+            button.btn.btn-outline-primary.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000') Submit
+          .col-md-2
+            button.btn.btn-outline-secondary.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000') Submit
+          .col-md-2
+            button.btn.btn-outline-success.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000') Submit
+          .col-md-2
+            button.btn.btn-outline-info.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000') Submit
+          .col-md-2
+            button.btn.btn-outline-danger.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000') Submit
+          .col-md-2
+            button.btn.btn-outline-warning.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000') Submit
+        .row.py-4.text-center
+          .col-md-2
+            button.btn.btn-ghost-primary.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000') Submit
+          .col-md-2
+            button.btn.btn-ghost-secondary.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000') Submit
+          .col-md-2
+            button.btn.btn-ghost-success.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000') Submit
+          .col-md-2
+            button.btn.btn-ghost-info.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000') Submit
+          .col-md-2
+            button.btn.btn-ghost-danger.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000') Submit
+          .col-md-2
+            button.btn.btn-ghost-warning.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000') Submit
+      h6 Loading Buttons with grow spinner
+      +example('https://coreui.io/docs/components/loading-buttons/')
+        .row.py-4.text-center
+          .col-md-2
+            button.btn.btn-primary.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000' data-coreui-spinner-type='grow') Submit
+          .col-md-2
+            button.btn.btn-secondary.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000' data-coreui-spinner-type='grow') Submit
+          .col-md-2
+            button.btn.btn-success.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000' data-coreui-spinner-type='grow') Submit
+          .col-md-2
+            button.btn.btn-info.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000' data-coreui-spinner-type='grow') Submit
+          .col-md-2
+            button.btn.btn-danger.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000' data-coreui-spinner-type='grow') Submit
+          .col-md-2
+            button.btn.btn-warning.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000' data-coreui-spinner-type='grow') Submit
+        .row.py-4.text-center
+          .col-md-2
+            button.btn.btn-outline-primary.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000' data-coreui-spinner-type='grow') Submit
+          .col-md-2
+            button.btn.btn-outline-secondary.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000' data-coreui-spinner-type='grow') Submit
+          .col-md-2
+            button.btn.btn-outline-success.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000' data-coreui-spinner-type='grow') Submit
+          .col-md-2
+            button.btn.btn-outline-info.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000' data-coreui-spinner-type='grow') Submit
+          .col-md-2
+            button.btn.btn-outline-danger.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000' data-coreui-spinner-type='grow') Submit
+          .col-md-2
+            button.btn.btn-outline-warning.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000' data-coreui-spinner-type='grow') Submit
+        .row.py-4.text-center
+          .col-md-2
+            button.btn.btn-ghost-primary.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000' data-coreui-spinner-type='grow') Submit
+          .col-md-2
+            button.btn.btn-ghost-secondary.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000' data-coreui-spinner-type='grow') Submit
+          .col-md-2
+            button.btn.btn-ghost-success.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000' data-coreui-spinner-type='grow') Submit
+          .col-md-2
+            button.btn.btn-ghost-info.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000' data-coreui-spinner-type='grow') Submit
+          .col-md-2
+            button.btn.btn-ghost-danger.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000' data-coreui-spinner-type='grow') Submit
+          .col-md-2
+            button.btn.btn-ghost-warning.btn-loading(data-coreui='loading-button' data-coreui-timeout='3000' data-coreui-spinner-type='grow') Submit

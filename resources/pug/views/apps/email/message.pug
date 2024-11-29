@@ -1,0 +1,91 @@
+extends ../../../_layout/email.pug
+
+block view
+  .card.email-app
+    .card-body
+      .btn-toolbar.mb-4
+        .btn-group.me-1
+          button.btn.btn-light(type='button')
+            svg.icon
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-envelope-closed")
+          button.btn.btn-light(type='button')
+            svg.icon
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-star")
+          button.btn.btn-light(type='button')
+            svg.icon
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-bookmark")
+        .btn-group.me-1
+          button.btn.btn-light(type='button')
+            svg.icon
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-share")
+          button.btn.btn-light(type='button')
+            svg.icon
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-share-all")
+          button.btn.btn-light(type='button')
+            svg.icon
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-share-boxed")
+        button.btn.btn-light.me-1(type='button')
+          svg.icon
+            use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+        .btn-group
+          button.btn.btn-light.dropdown-toggle(type='button', data-coreui-toggle='dropdown')
+            svg.icon
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-tags")
+            span.caret
+          .dropdown-menu
+            a.dropdown-item(href='#')
+              | add label
+              span.badge.bg-danger-gradient.ms-2  Home
+            a.dropdown-item(href='#')
+              | add label
+              span.badge.bg-info-gradient.ms-2  Job
+            a.dropdown-item(href='#')
+              | add label
+              span.badge.bg-success-gradient.ms-2  Clients
+            a.dropdown-item(href='#')
+              | add label
+              span.badge.bg-warning-gradient.ms-2  News
+        .btn-group.ms-auto
+          button.btn.btn-light(type='button')
+            svg.icon
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-chevron-left")
+          button.btn.btn-light(type='button')
+            svg.icon
+              use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-chevron-right")
+      .message
+        .message-details.flex-wrap.pb-3
+          .message-headers.d-flex.flex-wrap
+            .message-headers-subject.w-100.fs-5.fw-semibold
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            .message-headers-from
+              | Lukasz Holeczek
+              span.text-medium-emphasis
+                | (email@email.com)
+            .message-headers-date.ms-auto
+              svg.icon
+                use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-paperclip")
+              |  Today, 3:47 PM
+          hr
+          .message-body
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            blockquote
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          hr
+          .message-attachment
+            span.badge.bg-danger-gradient.me-2 zip
+            b bootstrap.zip
+            i  (2,5MB)
+          .message-attachment
+            span.badge.bg-info-gradient.me-2 txt
+            b readme.txt
+            i (7KB)
+          .message-attachment
+            span.badge.bg-success-gradient.me-2 xls
+            b spreadsheet.xls
+            i (984KB)
+          form.mt-3(method='post', action='')
+            .mb-3
+              textarea#message.form-control(name='body', rows='12', placeholder='Click here to reply')
+            .mb-3
+              button.btn.btn-success(tabindex='3', type='submit') Send message

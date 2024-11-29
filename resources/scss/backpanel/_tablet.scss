@@ -1,0 +1,149 @@
+@media (max-width: 991px) {
+    header {
+        &.header {
+            padding: 15px 30px;
+            .account {
+                a {
+                    img {
+                        width: 30px;
+                    }
+                }
+            }
+        }
+    }
+    ul.l-hdr {
+        li {
+            margin-right: 20px;
+            .logo {
+                img {
+                    height: 30px;
+                }
+            }
+            .box-menu {
+                font-size: 13px;
+                line-height: 18px;
+                min-width: 110px;
+            }
+        }
+    }
+    .search {
+        width: 300px;
+    }
+    .sidebar {
+        --cui-sidebar-width: 12rem;
+        &:not(.sidebar-end) ~ * {
+            --cui-sidebar-occupy-start: 12rem;
+        }
+        ul.sidebar-nav {
+            padding: 100px 0 10px;
+            li {
+                a {
+                    line-height: 16px;
+                    font-size: 12px;
+                    padding: 7px 20px 7px 30px !important;
+                    img {
+                        width: 20px;
+                        top: -1px;
+                    }
+                }
+            }
+        }
+    }
+    .pt120 {
+        padding-top: 100px;
+    }
+    .title {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    .table-responsive {
+        &.css-table {
+            .dataTables_info {
+                font-size: 13px;
+                line-height: 18px;
+                top: 7px;
+            }
+            table {
+                &.big {
+                    thead {
+                        tr {
+                            th {
+                                padding-left: 20px;
+                                padding-right: 20px;
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            td {
+                                padding-left: 20px;
+                                padding-right: 20px;
+                            }
+                        }
+                    }
+                }
+                &.dataTable {
+                    margin-bottom: 20px !important;
+                }
+                thead {
+                    tr {
+                        th {
+                            padding: 12px 20px 7px;
+                            font-size: 13px;
+                            line-height: 18px;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            padding: 10px 20px;
+                            font-size: 13px;
+                            line-height: 18px;
+                            .bdy {
+                                width: 185px;
+                            }
+                            .edit {
+                                a {
+                                    border-radius: 38px;
+                                    font-size: 13px;
+                                    line-height: 18px;
+                                    padding: 7px 12px 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ul.pagination {
+        margin-top: 20px;
+        li {
+            a.page-link {
+                font-size: 13px;
+                line-height: 18px;
+            }
+        }
+    }
+    .box-desc {
+        padding: 12px;
+        font-size: 13px;
+        line-height: 18px;
+        .mb20 {
+            margin-bottom: 15px;
+        }
+    }
+    .desc {
+        font-size: 15px;
+        line-height: 22px;
+        margin: 20px 0;
+    }
+    .mb35 {
+        margin-bottom: 25px;
+    }
+    .pad-content {
+        padding: 0 20px 50px;
+    }
+}

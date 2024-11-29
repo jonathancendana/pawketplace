@@ -1,0 +1,26 @@
+extends ../_layout/default.pug
+
+block scripts
+  // Plugins and scripts required by this view
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyASyYRBZmULmrmw_P9kgr7_266OhFNinPA')
+  script(src='js/google-maps.js')
+
+block breadcrumb
+  +breadcrumb(['Home', 'Plugins'], 'Google Maps')
+
+block view
+  +callout-custom
+    | CoreUI PRO Admin Template is delivered with the Google Maps plugin. The Maps JavaScript API lets you customize maps with your own content and imagery for display on web pages and mobile devices. The Maps JavaScript API features four basic map types (roadmap, satellite, hybrid, and terrain) which you can modify using layers and styles, controls and events, and various services and libraries.
+    br
+    br
+    | For more information please visit the official 
+    a(href='https://developers.google.com/maps/documentation/javascript/overview' target='_blank' rel='nofollow') Google Maps JavaScript API documentation
+    | .
+  .card.mb-4
+    .card-header
+      | Google Maps
+      a.badge.bg-danger-gradient.ms-2.text-decoration-none(href='https://coreui.io/pro/') CoreUI Pro Integration
+    .card-body
+      +example()
+        #map(style='height:560px;')
+        

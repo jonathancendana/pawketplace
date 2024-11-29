@@ -1,0 +1,152 @@
+@media (max-width: 575px) {
+	button.hvr-button {
+	    min-width: 120px;
+	    padding: 8px 15px;
+	    font-size: 13px;
+		line-height: 18px;
+	}
+	footer {
+		.last {
+			margin-top: 25px;
+		}
+	}
+	#main {
+		ul.l-button {
+	        li {
+	            margin-right: 10px;
+	        }
+	    }
+	    .box-select {
+	        margin-top: 20px;
+	        .t1 {
+	            font-size: 14px;
+	            line-height: 20px;
+	        }
+	        ul.l-select {
+	            &.pad {
+	            	li {
+	            		a {
+	            			padding: 10px 15px;
+	            		}
+	            	}
+	            }
+	            li {
+	            	margin-right: 10px;
+	                a {
+	                	padding: 15px 15px 10px;
+	                    min-width: 140px;
+	                    .img {
+	                        img {
+	                            width: 60px;
+	                        }
+	                    }
+	                }
+	            }
+	        }
+	    }
+	    .detail {
+	        .box-results {
+	        	font-size: 13px;
+	        	line-height: 18px;
+	            padding: 15px 20px;
+	            .mb7 {
+	            	margin-bottom: 5px;
+	            }
+	            .w300 {
+	            	width: 235px;
+	            }
+	            .tbl {
+	            	.cell {
+	            		&.w240 {
+	            			width: 190px;
+	            		}
+	            	}
+	            }
+	        }
+	    }
+	}
+}
+
+@media (max-width: 450px) {
+	header {
+		.hdr-global {
+			.navbar {
+				top: 12px;
+				ul.main-menu {
+					li {
+						a {
+							font-size: 12px;
+							img {
+								width: 15px;
+							}
+						}
+						ul.dropdown-menu {
+							min-width: 110px;
+	        				top: calc(100% + 27px);
+	        				li {
+	        					a {
+	        						padding: 5px 15px;
+	        						font-size: 12px;
+	        					}
+	        				}
+	        			}
+					}
+				}
+			}
+		}
+	}
+	.modal {
+	    .modal-dialog {
+	        width: 300px;
+	        max-width: 300px;
+	    }
+	    .title {
+	        font-size: 15px;
+	        line-height: 22px;
+	    }
+	    .close {
+	    	img {
+	    		width: 22px;
+	    	}
+	    }
+	    .box {
+	    	margin: 10px 0 15px;
+		    .bdy {
+		        p {
+		            font-size: 13px;
+		            line-height: 18px;
+		        }
+		    }
+	    }
+	}
+}
+
+@media (max-width: 400px) {
+	header {
+		.hdr-global {
+			.navbar {
+				ul.main-menu {
+					li {
+						a {
+							font-size: 9px;
+							img {
+								width: 12px;
+							}
+						}
+						ul.dropdown-menu {
+							min-width: 90px;
+							top: calc(100% + 30px);
+							border-radius: 5px;
+	        				li {
+	        					a {
+	        						padding: 3px 15px;
+	        						font-size: 10px;
+	        					}
+	        				}
+	        			}
+					}
+				}
+			}
+		}
+	}
+}

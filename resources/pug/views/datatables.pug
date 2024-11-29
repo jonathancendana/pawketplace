@@ -1,0 +1,551 @@
+extends ../_layout/default.pug
+
+block styles
+  link(href='node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css', rel='stylesheet')
+
+block scripts
+  // Plugins and scripts required by this view
+  script(src='node_modules/jquery/dist/jquery.min.js')
+  script(src='node_modules/datatables.net/js/jquery.dataTables.js')
+  script(src='node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js')
+  script(src='js/datatables.js')
+
+block breadcrumb
+  +breadcrumb(['Home', 'Plugins'], 'DataTables')
+
+block view
+  +callout-custom
+    | CoreUI PRO Admin Template is delivered with the DataTables plugin. DataTables is a plug-in for the Javascript library. It is a highly flexible tool, built upon the foundations of progressive enhancement, that adds all of these advanced features to any HTML table.
+    br
+    br
+    | For more information please visit the official 
+    a(href='https://datatables.net/manual/' target='_blank' rel='nofollow') DataTables documentation
+    | .
+  .card.mb-4
+    .card-header
+      |  DataTables
+      a.badge.bg-danger-gradient.ms-2.text-decoration-none(href='https://coreui.io/pro/') CoreUI Pro Integration
+    .card-body
+      +example()
+        block html
+          table.table.table-striped.border.datatable
+            thead
+              tr
+                th Username
+                th Date registered
+                th Role
+                th Status
+                th Actions
+            tbody
+              tr.align-middle
+                td Anton Phunihel
+                td 2012/01/01
+                td Member
+                td
+                  span.badge.bg-success-gradient Active
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Alphonse Ivo
+                td 2012/01/01
+                td Member
+                td
+                  span.badge.bg-success-gradient Active
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Thancmar Theophanes
+                td 2012/01/01
+                td Member
+                td
+                  span.badge.bg-success-gradient Active
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Walerian Khwaja
+                td 2012/01/01
+                td Member
+                td
+                  span.badge.bg-success-gradient Active
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Clemens Janko
+                td 2012/02/01
+                td Staff
+                td
+                  span.badge.bg-danger-gradient Banned
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Chidubem Gottlob
+                td 2012/02/01
+                td Staff
+                td
+                  span.badge.bg-danger-gradient Banned
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Hristofor Sergio
+                td 2012/03/01
+                td Member
+                td
+                  span.badge.bg-warning-gradient Pending
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Tadhg Griogair
+                td 2012/03/01
+                td Member
+                td
+                  span.badge.bg-warning-gradient Pending
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Pollux Beaumont
+                td 2012/01/21
+                td Staff
+                td
+                  span.badge.bg-success-gradient Active
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Adam Alister
+                td 2012/01/21
+                td Staff
+                td
+                  span.badge.bg-success-gradient Active
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Carlito Roffe
+                td 2012/08/23
+                td Staff
+                td
+                  span.badge.bg-danger-gradient Banned
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Sana Amrin
+                td 2012/08/23
+                td Staff
+                td
+                  span.badge.bg-danger-gradient Banned
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Adinah Ralph
+                td 2012/06/01
+                td Admin
+                td
+                  span.badge.bg-dark-gradient Inactive
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Dederick Mihail
+                td 2012/06/01
+                td Admin
+                td
+                  span.badge.bg-dark-gradient Inactive
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Hipólito András
+                td 2012/03/01
+                td Member
+                td
+                  span.badge.bg-warning-gradient Pending
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Fricis Arieh
+                td 2012/03/01
+                td Member
+                td
+                  span.badge.bg-warning-gradient Pending
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Scottie Maximilian
+                td 2012/03/01
+                td Member
+                td
+                  span.badge.bg-warning-gradient Pending
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Bao Gaspar
+                td 2012/01/01
+                td Member
+                td
+                  span.badge.bg-success-gradient Active
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Tullio Luka
+                td 2012/02/01
+                td Staff
+                td
+                  span.badge.bg-danger-gradient Banned
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Felice Arseniy
+                td 2012/02/01
+                td Admin
+                td
+                  span.badge.bg-dark-gradient Inactive
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Finlay Alf
+                td 2012/02/01
+                td Admin
+                td
+                  span.badge.bg-dark-gradient Inactive
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Theophilus Nala
+                td 2012/03/01
+                td Member
+                td
+                  span.badge.bg-warning-gradient Pending
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Sullivan Robert
+                td 2012/03/01
+                td Member
+                td
+                  span.badge.bg-warning-gradient Pending
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Kristóf Filiberto
+                td 2012/01/21
+                td Staff
+                td
+                  span.badge.bg-success-gradient Active
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Kuzma Edvard
+                td 2012/01/21
+                td Staff
+                td
+                  span.badge.bg-success-gradient Active
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Bünyamin Kasper
+                td 2012/08/23
+                td Staff
+                td
+                  span.badge.bg-danger-gradient Banned
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Crofton Arran
+                td 2012/08/23
+                td Staff
+                td
+                  span.badge.bg-danger-gradient Banned
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Bernhard Shelah
+                td 2012/06/01
+                td Admin
+                td
+                  span.badge.bg-dark-gradient Inactive
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Grahame Miodrag
+                td 2012/03/01
+                td Member
+                td
+                  span.badge.bg-warning-gradient Pending
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Innokentiy Celio
+                td 2012/03/01
+                td Member
+                td
+                  span.badge.bg-warning-gradient Pending
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Kostandin Warinhari
+                td 2012/03/01
+                td Member
+                td
+                  span.badge.bg-warning-gradient Pending
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")
+              tr.align-middle
+                td Ajith Hristijan
+                td 2012/03/01
+                td Member
+                td
+                  span.badge.bg-warning-gradient Pending
+                td
+                  a.btn.btn-success.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-magnifying-glass")
+                  a.btn.btn-info.me-2(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description")
+                  a.btn.btn-danger(href='#')
+                    svg.icon
+                      use(xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-trash")

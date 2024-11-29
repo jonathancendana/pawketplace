@@ -1,0 +1,120 @@
+extends ../../_layout/default.pug
+
+block canonical
+  link(rel='canonical' href='https://coreui.io/docs/forms/multi-select/')
+
+block scripts
+  script(src='js/multi-select.js')
+
+block breadcrumb
+  +breadcrumb(['Home', 'Components', 'Forms'], 'Multi Select')
+
+block view
+  +callout-custom
+    | Multi Select Component has been created as a replacemenet of the Select2 used in version 3.
+    br
+    br
+    | For more information how to use this component please visit the official 
+    a(href='https://coreui.io/docs/forms/multi-select/' target='_blank') documentation of CoreUI library
+    | .
+  .row
+    .col-12
+      .card.mb-4
+        .card-header
+          strong CoreUI Multi Select
+          span.small.ms-1 with Checkbox (Default Style)
+          a.badge.bg-danger-gradient.ms-2.text-decoration-none(href='https://coreui.io/pro/') CoreUI Pro Component
+        .card-body
+          +example('https://coreui.io/docs/forms/multi-select/')
+            form
+              .row
+                .col-3
+                  label Single Select
+                  select.form-multi-select(data-coreui-multiple="false" data-coreui-search="true")
+                    option(value='0') enhancement
+                    option(value='1') bug
+                    option(value='2') duplicate
+                    option(value='3') invalid
+                    optgroup(label='group')
+                      option(value='4') enhancement2
+                      option(value='5') bug2
+                .col-3
+                  label Multiple Select - text selection
+                  select.form-multi-select(data-coreui-search="true" data-coreui-selection-type="text")
+                    option(value='0') enhancement
+                    option(value='1') bug
+                    option(value='2') duplicate
+                    option(value='3') invalid
+                    optgroup(label='group')
+                      option(value='4') enhancement2
+                      option(value='5') bug2
+                .col-3
+                  label Multiple Select - tag selection
+                  select.form-multi-select(data-coreui-search="true" data-coreui-selection-type="tags")
+                    option(value='0') enhancement
+                    option(value='1') bug
+                    option(value='2') duplicate
+                    option(value='3') invalid
+                    optgroup(label='group')
+                      option(value='4') enhancement2
+                      option(value='5') bug2
+                .col-3
+                  label Multiple Select - counter selection
+                  select.form-multi-select(data-coreui-search="true" data-coreui-selection-type="counter")
+                    option(value='0') enhancement
+                    option(value='1') bug
+                    option(value='2') duplicate
+                    option(value='3') invalid
+                    optgroup(label='group')
+                      option(value='4') enhancement2
+                      option(value='5') bug2
+    .col-12
+      .card.mb-4
+        .card-header
+          strong CoreUI Multi Select
+          span.small.ms-1 with Text 
+          a.badge.bg-danger-gradient.ms-2.text-decoration-none(href='https://coreui.io/pro/') CoreUI Pro Component
+        .card-body
+          +example('https://coreui.io/docs/forms/multi-select/')
+            form
+              .row
+                .col-3
+                  label Single Select
+                  select.form-multi-select(data-coreui-multiple="false" data-coreui-search="true" data-coreui-options-style="text")
+                    option(value='0') enhancement
+                    option(value='1') bug
+                    option(value='2') duplicate
+                    option(value='3') invalid
+                    optgroup(label='group')
+                      option(value='4') enhancement2
+                      option(value='5') bug2
+                .col-3
+                  label Multiple Select - text selection
+                  select.form-multi-select(data-coreui-search="true" data-coreui-selection-type="text"  data-coreui-options-style="text")
+                    option(value='0') enhancement
+                    option(value='1') bug
+                    option(value='2') duplicate
+                    option(value='3') invalid
+                    optgroup(label='group')
+                      option(value='4') enhancement2
+                      option(value='5') bug2
+                .col-3
+                  label Multiple Select - tag selection
+                  select.form-multi-select(data-coreui-search="true" data-coreui-selection-type="tags"  data-coreui-options-style="text")
+                    option(value='0') enhancement
+                    option(value='1') bug
+                    option(value='2') duplicate
+                    option(value='3') invalid
+                    optgroup(label='group')
+                      option(value='4') enhancement2
+                      option(value='5') bug2
+                .col-3
+                  label Multiple Select - counter selection
+                  select.form-multi-select(data-coreui-search="true" data-coreui-selection-type="counter" data-coreui-options-style="text")
+                    option(value='0') enhancement
+                    option(value='1') bug
+                    option(value='2') duplicate
+                    option(value='3') invalid
+                    optgroup(label='group')
+                      option(value='4') enhancement2
+                      option(value='5') bug2

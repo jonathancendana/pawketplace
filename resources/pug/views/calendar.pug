@@ -1,0 +1,29 @@
+extends ../_layout/default.pug
+
+block styles
+  link(href='node_modules/fullcalendar/main.css', rel='stylesheet')
+
+block scripts
+  // Plugins and scripts required by this view
+  script(src='js/calendar.js')
+  script(src='node_modules/fullcalendar/main.js')
+
+block breadcrumb
+  +breadcrumb(['Home', 'Plugins'], 'Calendar')
+
+block view
+  +callout-custom
+    | CoreUI PRO Admin Template is delivered with the FullCalendar plugin. FullCalendar is a full-sized drag &amp; drop JavaScript event calendar.
+    br
+    br
+    | For more information please visit the official 
+    a(href='https://fullcalendar.io/docs' target='_blank' rel='nofollow') FullCalendar documentation
+    | .
+  .card.mb-4
+    .card-header
+      |  FullCalendar
+      a.badge.bg-danger-gradient.ms-2.text-decoration-none(href='https://coreui.io/pro/') CoreUI Pro Integration
+    .card-body
+      +example()
+        #calendar
+    

@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "poppinsregular";
+  src: url(/fonts/poppins-regular-webfont.woff2?ba3b88d4dc29ba766d7c1b83f386bd3a) format("woff2"), url(/fonts/poppins-regular-webfont.woff?13016007c95fb32d19c6dc7d4b3f2424) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "poppinsregular";
+  src: url(/fonts/poppins-semibold-webfont.woff2?bd9e74350e4ca6a285757155a786fcd3) format("woff2"), url(/fonts/poppins-semibold-webfont.woff?8ef8325bd74d6eb1cf0f302d38770aca) format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "poppinsmedium";
+  src: url(/fonts/poppins-medium.woff2?f194e7f397e907cbf31f813349997def) format("woff2"), url(/fonts/poppins-medium.woff?c76bb273a838cfb2e77170b541c59984) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

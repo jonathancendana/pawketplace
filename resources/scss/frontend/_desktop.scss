@@ -1,0 +1,62 @@
+@media (max-width: 1199px) {
+	#main {
+		.auth {
+			padding: 90px 0;
+			&.auth200 {
+	            padding: 160px 0;
+	        }
+		}
+		.about {
+	        .pad-about1 {
+	            padding: 110px 0 100px;
+	            .abs {
+	                width: 53%;
+	            }
+	            .t1 {
+		        	font-size: 30px;
+		        	line-height: 40px;
+		        }
+	        }
+	        .pad-about3 {
+	            margin: 50px 0;
+	            padding: 50px 0;
+	            .abs {
+	                width: 56%;
+	            }
+	        }
+	        .pad-about4 {
+	            margin: 90px 0;
+	        }
+	    }
+		.home {
+			.pad-home {
+		        margin: 0 0 80px;
+		        padding: 60px 0;
+		        .abs {
+		            width: 50%;
+		        }
+		        .t1 {
+		        	font-size: 35px;
+		        	line-height: 45px;
+		        }
+		    }
+			.pad-plan {
+		        margin: 80px 0 70px;
+		        padding: 70px 0;
+		        .abs {
+		            width: 47%;
+		        }
+		    }
+		    .pad-slider {
+		        padding: 30px 0 30px;
+		    }
+			.pad-about {
+		        margin: 90px 0;
+		        padding: 50px 0;
+		    }
+		}
+		.pad-contact {
+	        padding: 100px 0;
+	    }
+	}
+}

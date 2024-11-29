@@ -1,0 +1,436 @@
+@media (max-width: 767px) {
+    .box-dash {
+        .t1 {
+            font-size: 16px;
+        }
+        .item-dash {
+            margin-bottom: 12px;
+            padding: 12px 20px;
+            height: 62px;
+            .nm {
+                font-size: 14px;
+                line-height: 20px;
+            }
+            .tbl {
+                .cell {
+                    &.img {
+                        width: 45px;
+                    }
+                }
+            }
+            .view, .link {
+                a {
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .box-app {
+        .hscroll {
+            height: auto;
+            overflow: hidden;
+            padding-right: 0;
+        }
+        .empty {
+            margin-top: 20px;
+            img {
+                width: 90px;
+            }
+        }
+        .in-app {
+            margin-bottom: 12px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &.rel {
+                position: relative;
+                padding-top: 50px;
+            }
+            .box {
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                font-size: 12px;
+                line-height: 17px;
+                min-width: 70px;
+            }
+            .tbl {
+                &.block {
+                    display: block;
+                    .cell {
+                        display: block;
+                    }
+                }
+            }
+            .view {
+                a {
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .t1 {
+            font-size: 15px;
+            line-height: 22px;
+        }
+        .link {
+            text-align: left;
+            margin-top: 10px;
+            a {
+                display: block;
+                button.hvr-button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    button.hvr-button {
+        font-size: 12px;
+        line-height: 17px;
+        padding: 8px 15px 7px 15px;
+        min-width: 100px;
+        &.w200 {
+            min-width: 160px;
+        }
+    }
+    .box-desc {
+        padding: 10px;
+        font-size: 12px;
+        line-height: 15px;
+        .mb20 {
+            margin-bottom: 10px;
+        }
+    }
+    .desc {
+        font-size: 13px;
+        line-height: 18px;
+        margin: 15px 0;
+    }
+    .form-group {
+        label {
+            margin-bottom: 5px;
+            &.big {
+                font-size: 14px;
+                line-height: 20px;
+            }
+            &.mb0 {
+                margin-bottom: 5px;
+            }
+            font-size: 12px;
+            line-height: 17px;
+        }
+    }
+    .mb25 {
+        margin-bottom: 20px;
+    }
+    .box-view {
+        margin-top: 30px;
+        .t1 {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 5px;
+        }
+        .text {
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            font-size: 13px;
+            line-height: 22px;
+        }
+    }
+    ul.l-btn {
+        li {
+            margin-right: 5px;
+        }
+    }
+    ul.l-menu {
+        margin: 0 0 20px;
+        li {
+            margin-right: 15px;
+            a {
+                line-height: 18px;
+                font-size: 13px;
+                border-bottom: 2px solid transparent;
+            }
+        }
+    }
+    .sidebar {
+        --cui-sidebar-width: 100%;
+        ul.sidebar-nav {
+            padding: 0 20px 15px;
+            li {
+                a {
+                    line-height: 20px;
+                    font-size: 14px;
+                    padding: 7px 20px 4px 30px !important;
+                    img {
+                        width: 22px;
+                        top: -2px;
+                    }
+                }
+            }
+        }
+        ul.l-hdr {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            li {
+                display: inline-block;
+                .logo {
+                    img {
+                        height: 30px;
+                    }
+                }
+                .box-menu {
+                    font-size: 12px;
+                    padding: 8px 20px 5px;
+                    margin-left: 3px;
+                    min-width: auto;
+                    font-weight: bold;
+                    background: #D2C7FF;
+                    text-align: center;
+                    border-radius: 20px;
+                    color: black;
+                }
+            }
+        }
+        .box-hdr {
+            background: white;
+            padding: 15px 20px 20px;
+            .close {
+                cursor: pointer;
+                display: inline-block;
+                @include transition(all 0.3s);
+                img {
+                    width: 21px;
+                }
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+    .form-control {
+        &.big {
+            font-size: 14px;
+            line-height: 20px;
+            padding: 12px 20px;            
+        }
+        font-size: 12px;
+        line-height: 17px;
+    }
+    button.hvr-button {
+        &.big {
+            padding: 10px 20px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+    header {
+        .row {
+            margin-left: -5px;
+            margin-right: -5px;
+            > div {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+        &.header {
+            z-index: 1000;
+            .menu {
+                display: inline-block;
+                cursor: pointer;
+                @include transition(all 0.3s);
+                &:hover {
+                    opacity: 0.7;
+                }
+                img {
+                    width: 18px;
+                }
+            }
+            .logo3 {
+                vertical-align: middle;
+                display: inline-block;
+                a {
+                    display: inline-block;
+                    @include transition(all 0.3s);
+                    img {
+                        height: 30px;
+                    }
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+            .logo {
+                display: none;
+            }
+            .hdr-member {
+                height: 60px;
+                .box-menu {
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 12px;
+                    padding: 8px 20px 5px;
+                    margin-left: 3px;
+                    min-width: auto;
+                }
+                .box-name {
+                    font-size: 14px;
+                    line-height: 30px;
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+    .pad-content {
+        padding: 0 5px 50px;
+    }
+    .pt120 {
+        padding-top: 90px;
+    }
+    .title {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 15px;
+    }
+    .table-responsive {
+        &.css-table {
+            .dataTables_info {
+                margin-bottom: 5px;
+                top: 0;
+                float: none;
+                text-align: center;
+            }
+        }
+    }
+    .box-table {
+        padding: 15px;
+    }
+    ul.pagination {
+        margin-top: 15px;
+        justify-content: center;
+    }
+    .modal {
+        button.hvr-button {
+            font-size: 12px;
+            line-height: 17px;
+            padding: 8px 15px 7px 15px;
+            min-width: auto;
+        }
+        .modal-content {
+            padding: 15px;
+        }
+        .form-group {
+            &.slot {
+                margin-bottom: 5px;
+                padding-block: 5px;
+                &.mb30 {
+                    margin-bottom: 20px;
+                }
+                .select {
+                    font-size: 12px;
+                    line-height: 17px;
+                }
+            }
+        }
+        .text {
+            a {
+                font-size: 12px;
+                line-height: 17px;
+            }
+        }
+        .box-pop {
+            padding: 15px 20px;
+            margin: 15px 0 20px;
+            .img {
+                img {
+                    width: 30px;
+                }
+            }
+            .bdy {
+                margin-top: 10px;
+                p {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+        }
+        .cancel {
+            font-size: 12px;
+            line-height: 17px;
+            a {
+                font-size: 12px;
+                line-height: 17px;
+            }
+        }
+        .mb15 {
+            margin-bottom: 10px;
+        }
+        .desc {
+            font-size: 12px;
+            line-height: 17px;
+            margin-bottom: 15px;
+        }
+        .text {
+            font-size: 12px;
+            line-height: 17px;
+        }
+        .modal-dialog {
+            width: 500px;
+            max-width: 500px;
+        }
+        .t-pop {
+            font-size: 16px;
+            line-height: 26px;
+        }
+        .bdy-pop {
+            font-size: 12px;
+            line-height: 17px;
+            &.mb20 {
+                margin-bottom: 15px;
+            }
+        }
+        .box-emergency {
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 12px;
+            line-height: 17px;
+        }
+        .box-address {
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 12px;
+            line-height: 17px;
+        }
+    }
+    .accordion {
+        .item {
+            .nm {
+                .accordion-button {
+                    &.collapsed {
+                        padding-bottom: 10px;
+                    }
+                    &:after {
+                        top: 7px;
+                        width: 20px;
+                        height: 20px;
+                    }
+                    padding: 10px 25px 5px 0;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+            .body {
+                padding: 0 0 10px 0;
+                p {
+                    font-size: 13px;
+                    line-height: 17px;
+                }
+            }
+        }
+    }
+}

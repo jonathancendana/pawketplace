@@ -1,0 +1,66 @@
+@media (max-width: 1199px) {
+    .pad-content {
+        padding: 0 30px 50px;
+    }
+    .sidebar {
+        --cui-sidebar-width: 14rem;
+        &:not(.sidebar-end) ~ * {
+            --cui-sidebar-occupy-start: 14rem;
+        }
+        ul.sidebar-nav {
+            li {
+                a {
+                    padding: 7px 20px 7px 30px !important;
+                }
+            }
+        }
+    }
+    .box-app {
+        .h40 {
+            height: 60px;
+            margin-bottom: 20px;
+        }
+        .in-app {
+            padding: 15px;
+            .tbl {
+                .cell {
+                    &.img {
+                        width: 40px;
+                    }
+                }
+            }
+            .nm {
+                margin: 4px 0 2px; 
+                font-size: 14px;
+                line-height: 20px;
+            }
+            .date, .nm2, .view a {
+                font-size: 13px;
+                line-height: 18px;
+            }
+        }
+    }
+    .box-dash {
+        .item-dash {
+            padding: 10px 15px;
+            height: 55px;
+            .tbl {
+                .cell {
+                    &.w45 {
+                        width: 40px;
+                    }
+                }
+            }
+            .nm {
+                font-size: 12px;
+                line-height: 15px;
+            }
+            .view, .link {
+                a {
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+            }
+        }
+    }
+}
