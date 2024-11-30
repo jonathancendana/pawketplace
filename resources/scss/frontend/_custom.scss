@@ -51,6 +51,10 @@ a {
     line-height: 26px;
     font-weight: bold;
     margin-bottom: 25px;
+    &.no-bdr {
+        border-top: 0;
+        padding-top: 0;
+    }
 }
 .form-group {
     position: relative;
@@ -77,8 +81,15 @@ a {
         font-size: 14px;
         line-height: 20px;
         &.flex {
-            margin-bottom: 5px;
+            justify-content: center;
+            margin-bottom: 7px;
             display: flex;
+            &.big {
+                .day {
+                    width: 55px;
+                    margin: auto;
+                }
+            }
             .day {
                 font-weight: bold;
                 width: 45px;
@@ -125,9 +136,30 @@ textarea.form-control {
         border-color: $purple;
     	box-shadow: none;
     }
+    &::placeholder {
+        color: #A9A9A9;
+        position: relative;
+        top: 1px;
+    }
+    &:-ms-input-placeholder {
+        color: #A9A9A9;
+        position: relative;
+        top: 1px;
+    }
+    &::-ms-input-placeholder {
+        color: #A9A9A9;
+        position: relative;
+        top: 1px;
+    }
     // &:disabled {
     //     cursor: no-drop;
     // }
+}
+.note {
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 10px;
+    color: #6C6C6C;
 }
 button.hvr-button {
     border: 2px solid $purple;
@@ -388,7 +420,7 @@ header {
                     a {
                         font-family: 'poppinsmedium';
                         display: block;
-                        padding: 23px 0 33px;
+                        padding: 23px 0 30px;
                         color: $purple;
                         font-size: 16px;
                         @include transition(all 0.3s);
@@ -1357,6 +1389,7 @@ ul.l-radio {
         padding-left: 27px;
         font-size: 14px;
         line-height: 20px;
+        font-family: 'poppinsregular';
     }
     .checkmark {
         position: absolute;
@@ -1553,6 +1586,59 @@ ul.l-pdf {
             bottom: -6px;
             left: 50%;
             @include transform(translateX(-50%));
+        }
+    }
+}
+.css-radio {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    @include transition(all 0.3s);
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        &:checked ~ .checkmark {
+            background: $purple;
+            border-color: $purple;
+        }
+        &:checked ~ .checkmark:after {
+            display: block;
+        }
+    }
+    .text {
+        padding-left: 27px;
+        font-size: 14px;
+        line-height: 20px;
+        font-family: 'poppinsregular';
+    }
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 17px;
+        width: 17px;
+        border-radius: 3px;
+        background-color: white;
+        border: 2px solid #A9A9A9;
+        @include transition(all 0.3s);
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 5px;
+            top: 2px;
+            width: 5px;
+            height: 9px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
         }
     }
 }

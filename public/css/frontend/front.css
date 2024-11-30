@@ -10810,6 +10810,10 @@ a {
   font-weight: bold;
   margin-bottom: 25px;
 }
+.t-form.no-bdr {
+  border-top: 0;
+  padding-top: 0;
+}
 
 .form-group {
   position: relative;
@@ -10836,8 +10840,13 @@ a {
   line-height: 20px;
 }
 .form-group .text.flex {
-  margin-bottom: 5px;
+  justify-content: center;
+  margin-bottom: 7px;
   display: flex;
+}
+.form-group .text.flex.big .day {
+  width: 55px;
+  margin: auto;
 }
 .form-group .text.flex .day {
   font-weight: bold;
@@ -10883,6 +10892,38 @@ textarea.form-control {
 .form-control:focus {
   border-color: #764BE2;
   box-shadow: none;
+}
+.form-control::-moz-placeholder {
+  color: #A9A9A9;
+  position: relative;
+  top: 1px;
+}
+.form-control:-ms-input-placeholder {
+  color: #A9A9A9;
+  position: relative;
+  top: 1px;
+}
+.form-control::placeholder {
+  color: #A9A9A9;
+  position: relative;
+  top: 1px;
+}
+.form-control:-ms-input-placeholder {
+  color: #A9A9A9;
+  position: relative;
+  top: 1px;
+}
+.form-control::-ms-input-placeholder {
+  color: #A9A9A9;
+  position: relative;
+  top: 1px;
+}
+
+.note {
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 10px;
+  color: #6C6C6C;
 }
 
 button.hvr-button {
@@ -11122,7 +11163,7 @@ header .hdr-global .navbar ul.main-menu li:last-child {
 header .hdr-global .navbar ul.main-menu li a {
   font-family: "poppinsmedium";
   display: block;
-  padding: 23px 0 33px;
+  padding: 23px 0 30px;
   color: #764BE2;
   font-size: 16px;
   transition: all 0.3s;
@@ -12048,6 +12089,7 @@ ul.l-radio li:last-child {
   padding-left: 27px;
   font-size: 14px;
   line-height: 20px;
+  font-family: "poppinsregular";
 }
 .css-checkbox .checkmark {
   position: absolute;
@@ -12242,6 +12284,58 @@ ul.l-pdf li a:hover {
   bottom: -6px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.css-radio {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all 0.3s;
+}
+.css-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.css-radio input:checked ~ .checkmark {
+  background: #764BE2;
+  border-color: #764BE2;
+}
+.css-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+.css-radio .text {
+  padding-left: 27px;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "poppinsregular";
+}
+.css-radio .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  border-radius: 3px;
+  background-color: white;
+  border: 2px solid #A9A9A9;
+  transition: all 0.3s;
+}
+.css-radio .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 @media (max-width: 1199px) {

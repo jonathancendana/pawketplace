@@ -12,7 +12,7 @@
     <!-- Vendors styles-->
     <!-- <link rel="stylesheet" href="{{ asset('css/simplebar.css') }}"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0"/>
-    <title>Pawketplace - Pet Parent</title>
+    <title>Pawketplace - Vendor</title>
     @yield('css')
     <link href="{{ asset('css/coreui.min.css') }}" rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/vendors/simplebar.css"> -->

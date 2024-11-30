@@ -1,4 +1,4 @@
-@extends('vendor.layout.app')
+@extends('website.vendor.layout.app')
 
 @section('content')
 <div class="pad-content">
@@ -10,21 +10,21 @@
                     <form>
                         <div class="form-group">
                             <label>Contact person name<span class="red">*</span></label>
-                            <input type="text" class="form-control" name=""/>
+                            <input type="text" class="form-control" name="" required />
                             <div class="required">This field is required</div>
                         </div>
                         <div class="form-group">
                             <label>Email address<span class="red">*</span></label>
-                            <input class="form-control" type="email" name=""/>
+                            <input class="form-control" type="email" name="" required />
                             <div class="required">Please input a valid email address</div>
                         </div>
                         <div class="form-group">
                             <label>Message<span class="red">*</span></label>
-                            <textarea class="form-control" type="message" name=""></textarea>
+                            <textarea class="form-control" type="message" name="" required></textarea>
                             <div class="required">This field is required</div>
                         </div>
                         <div class="link-btn">
-                            <button class="hvr-button w200" type="submit">Submit</button>
+                            <button class="hvr-button w200" type="submit" disabled>Submit</button>
                         </div>
                     </form>
                 </div>
@@ -103,6 +103,22 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $('.nav-group-contact a').addClass('active');
+
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.querySelector('form');
+        const requiredFields = form.querySelectorAll('[required]');
+        const submitButton = form.querySelector('button[type="submit"]');
+
+        function checkRequiredFields() {
+            const allRequiredFilled = Array.from(requiredFields).every(field => field.value.trim() !== '');
+            submitButton.disabled = !allRequiredFilled;
+        }
+
+        requiredFields.forEach(field => {
+            field.addEventListener('input', checkRequiredFields);
+        });
+        checkRequiredFields();
     });
 </script>
 @endsection

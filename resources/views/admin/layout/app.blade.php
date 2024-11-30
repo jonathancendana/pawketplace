@@ -11,7 +11,7 @@
     <meta name="theme-color" content="#ffffff"> -->
     <!-- Vendors styles-->
     <!-- <link rel="stylesheet" href="{{ asset('css/simplebar.css') }}"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0"/>
+    <!-- <meta name="viewport" content="width=1024, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> -->
     <title>Pawketplace - Backpanel</title>
     @yield('css')
     <link href="{{ asset('css/coreui.min.css') }}" rel="stylesheet">
@@ -30,11 +30,13 @@
     <div class="wrapper d-flex flex-column min-vh-100">
         @include('admin.layout.header')
         <div class="body flex-grow-1">
-            @yield('content')
+            <div class="pt120">
+                @yield('content')
+            </div>
         </div>
     </div>
     
-    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModal" aria-hidden="true">
+    <!-- <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="img-pop"><img src="{{ asset('assets/img/admin/save-success.png') }}" alt="" title=""/></div>
@@ -61,7 +63,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="bg-loading" style="background: transparent !important;">
         <div class="abs">
             <img src="{{ asset('assets/img/admin/loading.gif') }}" alt="" title=""/>
@@ -119,6 +121,14 @@
     <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
     <script>
         $(function() {
+            $('.click-name').click(function () {
+                $('.drop-name').toggleClass('open');
+            });
+            $("html").click(function(a) {
+                if (!$(a.target).parents().is(".box-name")) {
+                    $('.drop-name').removeClass('open');
+                }
+            });
             var route_prefix = "url-to-filemanager";
             $('.lfm').filemanager('image', {
                 route_prefix

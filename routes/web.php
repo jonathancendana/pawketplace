@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('website/index');
 });
-
 Route::get('/pet-cost-calculator', function () {
     return view('website/discover-track/pet-cost-calculator/index');
 });
@@ -147,6 +146,70 @@ Route::get('vendor/contact-us', function () {
 Route::get('admin/login', function () {
     return view('admin.auth.login');
 });
+Route::get('admin/forgot', function () {
+    return view('admin.auth.forgot');
+});
+Route::get('admin/send', function () {
+    return view('admin.auth.send');
+});
+Route::get('admin/reset', function () {
+    return view('admin.auth.reset');
+});
+Route::get('admin/reset-success', function () {
+    return view('admin.auth.reset-success');
+});
 
+/* Account Management  */
+/* Users */
+Route::get('admin/account-management/users', function () {
+    return view('admin.account-management.users.index');
+});
 
+/* Pet Owners */
+Route::get('admin/account-management/pet-owners', function () {
+    return view('admin.account-management.pet-owners.index');
+});
+
+/* Vendor */
+Route::get('admin/account-management/vendor', function () {
+    return view('admin.account-management.vendor.index');
+});
+
+/* Appointments  */
+Route::get('admin/appointments/view', function () {
+    return view('admin.appointments.view');
+});
+
+/* Content Management  */
+/* Advertisement */
+Route::get('admin/content-management/advertisement', function () {
+    return view('admin.content-management.advertisement.index');
+});
+Route::get('admin/content-management/advertisement/add', function () {
+    return view('admin.content-management.advertisement.add');
+});
+Route::get('admin/content-management/advertisement/edit', function () {
+    return view('admin.content-management.advertisement.edit');
+});
+
+/* Pet Cost Calculator */
+Route::get('admin/content-management/pet-cost-calculator', function () {
+    return view('admin.content-management.pet-cost-calculator.index');
+});
+
+/* Symptom Checker */
+Route::get('admin/content-management/symptom-checker', function () {
+    return view('admin.content-management.symptom-checker.index');
+});
+
+/* FAQ */
+Route::get('admin/content-management/faq', function () {
+    return view('admin.content-management.faq.index');
+});
+Route::get('admin/content-management/faq/add', function () {
+    return view('admin.content-management.faq.add');
+});
+Route::get('admin/content-management/faq/edit', function () {
+    return view('admin.content-management.faq.edit');
+});
 /* END ADMIN */

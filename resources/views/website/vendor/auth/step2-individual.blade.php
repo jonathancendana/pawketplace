@@ -26,7 +26,7 @@
 			            </ul>
 						<div class="t1 mb20">Set up your shop in PawketPlace</div>
 						<div class="box-info-step">Is your shop already listed in <a href="#">PawketPlace’s list of shops</a>? If yes, please select your shop below, and we’ll verify the details.</div>
-						<form action="">
+						<form action="{{ URL::to('/vendor/step3') }}">
 							<ul class="l-btn center mt50">
 								<li>
 									<a href="{{ URL::to('/vendor/step1') }}">
@@ -34,9 +34,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="{{ URL::to('/vendor/step3') }}">
-										<button class="hvr-button" type="submit" disabled>Next</button>
-									</a>
+									<button class="hvr-button" type="submit" disabled>Next</button>
 								</li>
 							</div>
 						</form>

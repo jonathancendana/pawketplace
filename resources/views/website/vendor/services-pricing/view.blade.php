@@ -1,4 +1,4 @@
-@extends('vendor.layout.app')
+@extends('website.vendor.layout.app')
 
 @section('content')
 <div class="pad-content">
