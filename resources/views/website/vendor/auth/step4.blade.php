@@ -189,7 +189,7 @@
 									<button class="hvr-button" type="button">Submit</button>
 								</a>
 							</li>
-						</div>
+						</ul>
 					</div>
 				</div>
 			</div>

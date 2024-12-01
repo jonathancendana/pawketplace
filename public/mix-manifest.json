@@ -1245,6 +1245,7 @@
     "/assets/img/about3.png": "/assets/img/about3.png",
     "/assets/img/admin/account-vendor.svg": "/assets/img/admin/account-vendor.svg",
     "/assets/img/admin/add.svg": "/assets/img/admin/add.svg",
+    "/assets/img/admin/back.svg": "/assets/img/admin/back.svg",
     "/assets/img/admin/bg-login.png": "/assets/img/admin/bg-login.png",
     "/assets/img/admin/close.svg": "/assets/img/admin/close.svg",
     "/assets/img/admin/delete-services.svg": "/assets/img/admin/delete-services.svg",
@@ -1304,6 +1305,7 @@
     "/assets/img/admin/pagination-right.svg": "/assets/img/admin/pagination-right.svg",
     "/assets/img/admin/search.svg": "/assets/img/admin/search.svg",
     "/assets/img/admin/status.svg": "/assets/img/admin/status.svg",
+    "/assets/img/admin/upload.svg": "/assets/img/admin/upload.svg",
     "/assets/img/apple.png": "/assets/img/apple.png",
     "/assets/img/appointment.svg": "/assets/img/appointment.svg",
     "/assets/img/bg-about.png": "/assets/img/bg-about.png",
@@ -1363,6 +1365,5 @@
     "/assets/img/select.svg": "/assets/img/select.svg",
     "/assets/img/success.svg": "/assets/img/success.svg",
     "/assets/img/symptom-checker.svg": "/assets/img/symptom-checker.svg",
-    "/assets/img/admin/back.svg": "/assets/img/admin/back.svg",
-    "/assets/img/admin/upload.svg": "/assets/img/admin/upload.svg"
+    "/assets/img/admin/verified.svg": "/assets/img/admin/verified.svg"
 }

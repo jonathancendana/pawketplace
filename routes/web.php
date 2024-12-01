@@ -171,8 +171,32 @@ Route::get('admin/account-management/pet-owners', function () {
 });
 
 /* Vendor */
-Route::get('admin/account-management/vendor', function () {
-    return view('admin.account-management.vendor.index');
+Route::get('admin/account-management/vendor/registered', function () {
+    return view('admin.account-management.vendor.registered.index');
+});
+Route::get('admin/account-management/vendor/registered/pending', function () {
+    return view('admin.account-management.vendor.registered.pending');
+});
+Route::get('admin/account-management/vendor/registered/new', function () {
+    return view('admin.account-management.vendor.registered.new');
+});
+Route::get('admin/account-management/vendor/registered/new2', function () {
+    return view('admin.account-management.vendor.registered.new2');
+});
+Route::get('admin/account-management/vendor/registered/rejected', function () {
+    return view('admin.account-management.vendor.registered.rejected');
+});
+Route::get('admin/account-management/vendor/registered/active', function () {
+    return view('admin.account-management.vendor.registered.active');
+});
+Route::get('admin/account-management/vendor/placeholder', function () {
+    return view('admin.account-management.vendor.placeholder.index');
+});
+Route::get('admin/account-management/vendor/placeholder/add', function () {
+    return view('admin.account-management.vendor.placeholder.add');
+});
+Route::get('admin/account-management/vendor/placeholder/edit', function () {
+    return view('admin.account-management.vendor.placeholder.edit');
 });
 
 /* Appointments  */

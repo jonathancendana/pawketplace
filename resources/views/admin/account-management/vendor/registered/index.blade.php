@@ -4,6 +4,14 @@
 <div class="pad-content">
     <div class="container">
         <div class="title">Vendor</div>
+        <ul class="l-menu">
+            <li>
+                <a class="active" href="{{ URL::to('/admin/account-management/vendor/registered') }}">Registered</a>
+            </li>
+            <li>
+                <a href="{{ URL::to('/admin/account-management/vendor/placeholder') }}">Placeholder</a>
+            </li>
+        </ul>
     </div>
 </div>
 @endsection

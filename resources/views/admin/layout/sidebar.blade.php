@@ -29,7 +29,7 @@
             <a class="nav-link" href="{{ URL::to('/admin/account-management/pet-owners') }}">Pet Owners</a>
         </li>
         <li class="nav-group nav-item nav-group-vendor mb15">
-            <a class="nav-link" href="{{ URL::to('/admin/account-management/vendor') }}">Vendors</a>
+            <a class="nav-link" href="{{ URL::to('/admin/account-management/vendor/registered') }}">Vendors</a>
         </li>
         <li class="nav-group nav-item pl40">Appointments</li>
         <li class="nav-group nav-item nav-group-appointments mb15">
