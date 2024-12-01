@@ -11,12 +11,16 @@
                 <div class="mb25-global">
                     <div class="row">
                         <div class="col-md-6 my-auto">
-                            <div class="title mb0">Vendor application</div>
+                            <div class="title mb0">Vendor</div>
                         </div>
                         <div class="col-md-6 my-auto text-end">
                             <div class="box-status green">Active</div>
                         </div>
                     </div>
+                </div>
+                <div class="form-group">
+                    <label>Email verified?</label>
+                    <div class="text">Yes</div>
                 </div>
                 <div class="form-group">
                     <label>Category</label>
@@ -42,7 +46,7 @@
                             <div class="text">123123123123</div>
                         </div>
                     </div>
-                    <div class="col-md-6 my-auto text-end">
+                    <div class="col-md-6 my-auto">
                         <div class="form-group">
                             <label>AVS licensed number</label>
                             <div class="text">123123123123</div>
@@ -68,7 +72,26 @@
                     <label>Postal code</label>
                     <div class="text">437074</div>
                 </div>
-                <div class="t-form">Shop’s contact information</div>
+                <div class="t-form">Contact person’s details</div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Contact person’s name</label>
+                            <div class="text">Jerome Ong</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Contact person’s contact no.</label>
+                            <div class="text">+65 91111 1123</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Contact person’s email address</label>
+                    <div class="text">JeromeOng@thegentlevet.sg</div>
+                </div>
+                <div class="t-form">About the shop</div>
                 <div class="form-group">
                     <label>Shop’s name</label>
                     <div class="text">The Gentle Vet</div>
@@ -158,11 +181,8 @@
                     <div class="t1">Audit trail</div>
                     <div class="mb10">
                         <div class="tbl">
-                            <div class="cell w150">22 Nov 2024, 1:40PM</div>
-                            <div class="cell">
-                                <div>Jerome Tan (A01) rejected shop application</div>
-                                <div><b>Remarks</b>: Did not include XXX and XXXX and XXXX and XXXX and XXXX and XXXX and XXXXX</div>
-                            </div>
+                            <div class="cell w150">23 Nov 2024, 12:30PM</div>
+                            <div class="cell">Jerome Tan (A01) approved shop application</div>
                         </div>
                     </div>
                     <div class="mb10">

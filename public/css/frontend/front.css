@@ -12017,7 +12017,7 @@ footer ul.l-soc li a:hover {
 }
 .select .select2-container .select2-selection--single:focus {
   border-color: #764BE2;
-  box-shadow: none;
+  box-shadow: 0 0 5px 4px #ECE8FF;
 }
 .select .select2-container .select2-selection--single .select2-selection__rendered {
   color: black;
@@ -12046,9 +12046,11 @@ footer ul.l-soc li a:hover {
 
 .select2-container--default .select2-results__option--selected {
   background: white;
+  color: black;
 }
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
-  background: #764BE2;
+  background: rgba(236, 232, 255, 0.8);
+  color: black;
 }
 
 ul.l-radio {

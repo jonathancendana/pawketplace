@@ -16508,6 +16508,27 @@ a {
   font-size: 14px;
   line-height: 20px;
 }
+.form-group .text a {
+  display: inline-block;
+  font-weight: bold;
+  color: #764BE2;
+  font-size: 14px;
+  line-height: 20px;
+  transition: all 0.3s;
+  position: relative;
+}
+.form-group .text a:before {
+  width: 100%;
+  height: 0.5px;
+  background: #764BE2;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  content: "";
+}
+.form-group .text a:hover {
+  color: #7F73E3;
+}
 .form-group .text.flex {
   justify-content: center;
   margin-bottom: 7px;
@@ -16521,7 +16542,7 @@ a {
   margin: auto;
 }
 .form-group .text.flex .day {
-  font-weight: bold;
+  font-family: "poppinsmedium";
   width: 45px;
 }
 .form-group .text .mb20 {
@@ -16920,9 +16941,21 @@ html:not([dir=rtl]) .picker-input-group .form-control:not(:last-child) {
 .pt120 {
   padding-top: 120px;
 }
+.pt120.pt70 {
+  padding-top: 70px;
+}
 
 .pad-content {
   padding: 0 60px 50px;
+}
+.pad-content.pet {
+  background: #ECE8FF;
+  padding-top: 50px;
+  padding-block: 20px;
+}
+
+.pad-content2 {
+  padding: 40px 60px;
 }
 
 .title {
@@ -16933,6 +16966,20 @@ html:not([dir=rtl]) .picker-input-group .form-control:not(:last-child) {
 }
 .title.mb0 {
   margin-bottom: 0;
+}
+
+.title2 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+
+.title3 {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 10px;
 }
 
 .note {
@@ -17255,6 +17302,12 @@ ul.l-btn li a.bdr:before {
   transition: all 0.3s;
   position: relative;
 }
+.link-global a {
+  color: #764BE2;
+}
+.link-global a:hover {
+  color: #7F73E3;
+}
 .link-global:before {
   width: 100%;
   height: 0.5px;
@@ -17448,6 +17501,10 @@ ul.l-radio li:last-child {
   margin-bottom: 25px;
 }
 
+.mb30-global {
+  margin-bottom: 30px;
+}
+
 .box-status {
   padding: 5px 12px;
   border-radius: 20px;
@@ -17481,6 +17538,9 @@ ul.l-radio li:last-child {
   border-radius: 16px;
   background: #F7F7F7;
 }
+.box-audit.mt0 {
+  margin-top: 0;
+}
 .box-audit .t1 {
   font-size: 16px;
   line-height: 25px;
@@ -17496,4 +17556,217 @@ ul.l-radio li:last-child {
 .box-audit .tbl .cell.w150 {
   font-family: "poppinsmedium";
   width: 160px;
+}
+
+.css-select {
+  position: relative;
+  width: 100%;
+}
+.css-select::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  background: url(/images/select.svg?21ca68da8d92e2a746fb6dc589e88b1c);
+  width: 25px;
+  height: 24px;
+  pointer-events: none;
+}
+.css-select .select2-container {
+  width: 100% !important;
+}
+.css-select .select2-container .select2-selection--single {
+  height: 40px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+}
+.css-select .select2-container .select2-selection--single:focus {
+  border-color: #764BE2;
+  box-shadow: 0 0 5px 4px #ECE8FF;
+}
+.css-select .select2-container .select2-selection--single .select2-selection__rendered {
+  color: black;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px 30px 8px 15px;
+}
+.css-select .select2-selection__arrow, .css-select .select2-selection__clear, .css-select .select-options {
+  display: none;
+}
+
+.select2-dropdown {
+  z-index: 9999;
+  border-radius: 8px;
+  box-shadow: none;
+  border: 0;
+  min-width: auto;
+}
+
+.select2-results__options {
+  font-size: 14px;
+  line-height: 20px;
+  border: 1px solid #dcdcdc;
+  border-top: 0;
+}
+
+.select2-container--default .select2-results__option--selected {
+  background: white;
+  color: black;
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background: rgba(236, 232, 255, 0.8);
+  color: black;
+}
+
+.css-checkbox {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all 0.3s;
+}
+.css-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.css-checkbox input:checked ~ .checkmark {
+  border-color: #764BE2;
+}
+.css-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.css-checkbox .text {
+  padding-left: 27px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.css-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #A9A9A9;
+  transition: all 0.3s;
+}
+.css-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 3px;
+  top: 3px;
+  width: 10px;
+  height: 10px;
+  background: #764BE2;
+  border-radius: 50%;
+}
+
+.box-profile {
+  margin-bottom: 40px;
+}
+.box-profile .tbl .cell.img {
+  width: 130px;
+  padding-right: 30px;
+}
+.box-profile .tbl .cell.img .bdr {
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: 5px solid white;
+}
+.box-profile .tbl .cell.img .bdr img {
+  border-radius: 50%;
+  width: 100%;
+}
+.box-profile .tbl .cell .nm {
+  font-size: 25px;
+  line-height: 35px;
+  font-weight: bold;
+}
+.box-profile .tbl .cell ul.l-profile {
+  margin: 0;
+  padding: 0;
+}
+.box-profile .tbl .cell ul.l-profile li {
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 7px;
+  padding-right: 7px;
+  border-right: 1px solid black;
+  font-size: 14px;
+  line-height: 20px;
+  color: black;
+}
+.box-profile .tbl .cell ul.l-profile li:last-child {
+  margin-right: 0;
+}
+
+.box-pet {
+  margin-bottom: 20px;
+  border-radius: 16px;
+  padding: 20px;
+}
+.box-pet .box2-pet:last-child {
+  margin-bottom: 0;
+}
+.box-pet.grey {
+  background: #f7f7f7;
+}
+.box-pet.pink {
+  background: #FFE7EB;
+}
+.box-pet.orange {
+  background: #FFF9E5;
+}
+.box-pet ul.l-pet {
+  margin: 0 0 5px;
+  padding: 0;
+}
+.box-pet ul.l-pet.mb10 {
+  margin-bottom: 10px;
+}
+.box-pet ul.l-pet li {
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 3px;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: bold;
+  color: black;
+}
+.box-pet ul.l-pet li:last-child {
+  margin-right: 0;
+}
+
+.box2-pet {
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.box2-pet .mb5 {
+  margin-bottom: 5px;
+}
+.box2-pet ul.l-date {
+  margin: 0 0 5px;
+  padding: 0;
+}
+.box2-pet ul.l-date li {
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
+}
+.box2-pet ul.l-date li:last-child {
+  margin-right: 0;
+}
+.box2-pet ul.l-date li .box-status {
+  font-size: 12px;
 }

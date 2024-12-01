@@ -1306,6 +1306,7 @@
     "/assets/img/admin/search.svg": "/assets/img/admin/search.svg",
     "/assets/img/admin/status.svg": "/assets/img/admin/status.svg",
     "/assets/img/admin/upload.svg": "/assets/img/admin/upload.svg",
+    "/assets/img/admin/verified.svg": "/assets/img/admin/verified.svg",
     "/assets/img/apple.png": "/assets/img/apple.png",
     "/assets/img/appointment.svg": "/assets/img/appointment.svg",
     "/assets/img/bg-about.png": "/assets/img/bg-about.png",
@@ -1365,5 +1366,10 @@
     "/assets/img/select.svg": "/assets/img/select.svg",
     "/assets/img/success.svg": "/assets/img/success.svg",
     "/assets/img/symptom-checker.svg": "/assets/img/symptom-checker.svg",
-    "/assets/img/admin/verified.svg": "/assets/img/admin/verified.svg"
+    "/assets/img/admin/deworm.svg": "/assets/img/admin/deworm.svg",
+    "/assets/img/admin/parasite-control.svg": "/assets/img/admin/parasite-control.svg",
+    "/assets/img/admin/vaccination.svg": "/assets/img/admin/vaccination.svg",
+    "/assets/img/admin/veterinary-visits.svg": "/assets/img/admin/veterinary-visits.svg",
+    "/assets/img/admin/profile-cat.png": "/assets/img/admin/profile-cat.png",
+    "/assets/img/admin/profile-dog.png": "/assets/img/admin/profile-dog.png"
 }

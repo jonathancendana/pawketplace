@@ -183,25 +183,29 @@
 	});
 
 	document.addEventListener('DOMContentLoaded', () => {
-	    const form = document.querySelector('form');
-	    const categorySelect = $('.css-select');
-	    const radioButtons = form.querySelectorAll('.type-radio');
-	    const submitButton = form.querySelector('button[type="submit"]');
-	    const checkRequiredFields = () => {
-	        const isCategorySelected = categorySelect.val() !== null && categorySelect.val() !== '';
-	        const isRadioSelected = Array.from(radioButtons).some(radio => radio.checked);
-	        submitButton.disabled = !(isCategorySelected && isRadioSelected);
-	    };
-	    categorySelect.on('change', () => {
-	        checkRequiredFields();
-	    });
+        const form = document.querySelector('form');
+        const inputs = form.querySelectorAll('input[required], select[required]');
+        const submitButton = form.querySelector('button[type="submit"]');
 
-	    radioButtons.forEach(radio => {
-	        radio.addEventListener('change', () => {
-	            checkRequiredFields();
-	        });
-	    });
-	    checkRequiredFields();
-	});
+        const checkRequiredFields = () => {
+            const allFilled = Array.from(inputs).every(input => {
+                if (input.type === 'radio') {
+                    return form.querySelector(`input[name="${input.name}"]:checked`) !== null;
+                }
+                return input.value.trim() !== '';
+            });
+
+            submitButton.disabled = !allFilled;
+        };
+        inputs.forEach(input => {
+            if (input.type === 'radio') {
+                const radios = form.querySelectorAll(`input[name="${input.name}"]`);
+                radios.forEach(radio => radio.addEventListener('change', checkRequiredFields));
+            } else {
+                input.addEventListener('input', checkRequiredFields);
+            }
+        });
+        checkRequiredFields();
+    });
 </script>
 @endsection

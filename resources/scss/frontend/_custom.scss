@@ -1317,7 +1317,7 @@ footer {
             @include border-radius(8px);
             &:focus {
                 border-color: $purple;
-                box-shadow: none;
+                box-shadow: 0 0 5px 4px #ECE8FF;
             }
             .select2-selection__rendered {
                 color: black;
@@ -1347,9 +1347,11 @@ footer {
 .select2-container--default {
     .select2-results__option--selected {
         background: white;
+        color: black;
     }
     .select2-results__option--highlighted.select2-results__option--selectable {
-        background: $purple;
+        background: rgba(236, 232, 255, 0.8);
+        color: black;
     }
 }
 

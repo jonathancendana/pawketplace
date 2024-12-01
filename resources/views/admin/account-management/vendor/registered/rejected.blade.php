@@ -42,7 +42,7 @@
                             <div class="text">123123123123</div>
                         </div>
                     </div>
-                    <div class="col-md-6 my-auto text-end">
+                    <div class="col-md-6 my-auto">
                         <div class="form-group">
                             <label>AVS licensed number</label>
                             <div class="text">123123123123</div>
@@ -68,7 +68,26 @@
                     <label>Postal code</label>
                     <div class="text">437074</div>
                 </div>
-                <div class="t-form">Shop’s contact information</div>
+                <div class="t-form">Contact person’s details</div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Contact person’s name</label>
+                            <div class="text">Jerome Ong</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Contact person’s contact no.</label>
+                            <div class="text">+65 91111 1123</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Contact person’s email address</label>
+                    <div class="text">JeromeOng@thegentlevet.sg</div>
+                </div>
+                <div class="t-form">About the shop</div>
                 <div class="form-group">
                     <label>Shop’s name</label>
                     <div class="text">The Gentle Vet</div>

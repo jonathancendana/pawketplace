@@ -42,19 +42,29 @@
 	});
 
 	document.addEventListener('DOMContentLoaded', () => {
-	    const form = document.querySelector('form');
-	    const requiredFields = form.querySelectorAll('[required]');
-	    const submitButton = form.querySelector('button[type="submit"]');
+        const form = document.querySelector('form');
+        const inputs = form.querySelectorAll('input[required], select[required]');
+        const submitButton = form.querySelector('button[type="submit"]');
 
-	    function checkRequiredFields() {
-	        const allRequiredFilled = Array.from(requiredFields).every(field => field.value.trim() !== '');
-	        submitButton.disabled = !allRequiredFilled;
-	    }
+        const checkRequiredFields = () => {
+            const allFilled = Array.from(inputs).every(input => {
+                if (input.type === 'radio') {
+                    return form.querySelector(`input[name="${input.name}"]:checked`) !== null;
+                }
+                return input.value.trim() !== '';
+            });
 
-	    requiredFields.forEach(field => {
-	        field.addEventListener('input', checkRequiredFields);
-	    });
-	    checkRequiredFields();
-	});
+            submitButton.disabled = !allFilled;
+        };
+        inputs.forEach(input => {
+            if (input.type === 'radio') {
+                const radios = form.querySelectorAll(`input[name="${input.name}"]`);
+                radios.forEach(radio => radio.addEventListener('change', checkRequiredFields));
+            } else {
+                input.addEventListener('input', checkRequiredFields);
+            }
+        });
+        checkRequiredFields();
+    });
 </script>
 @endsection

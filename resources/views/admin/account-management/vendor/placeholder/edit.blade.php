@@ -18,33 +18,32 @@
                         <label>Category</label>
                         <div class="css-select">
                             <select name="" id="">
-                                <option></option>
-                                <option value="Category 1">Category 1</option>
+                                <option value="Category 1" selected>Category 1</option>
                                 <option value="Category 2">Category 2</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label>Shop’s name</label>
-                        <input type="text" class="form-control" value=""/>
+                        <input type="text" class="form-control" value="FurEver Friends Academy"/>
                     </div>
                     <div class="form-group">
                         <label>Website</label>
-                        <input type="text" class="form-control" value=""/>
+                        <input type="text" class="form-control" value="www.facebook.com/fureverfriendsacademy"/>
                     </div>
                     <div class="form-group">
                         <label>Shop’s address line 1</label>
-                        <input type="text" class="form-control" value=""/>
+                        <input type="text" class="form-control" value="291 Tanjong Katong Rd"/>
                     </div>
                     <div class="form-group">
                         <label>Shop’s address line 2</label>
-                        <input type="text" class="form-control" value=""/>
+                        <input type="text" class="form-control" value="291 Tanjong Katong Rd"/>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Shop’s Postal code</label>
-                                <input type="text" class="form-control" value=""/>
+                                <input type="text" class="form-control" value="437074"/>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -60,7 +59,7 @@
                                         </div>
                                     </div>
                                     <div class="col-7">
-                                        <input class="form-control only-number" type="text" name="" value="" required />
+                                        <input class="form-control only-number" type="text" name="" value="123123" required />
                                     </div>
                                 </div>
                             </div>
@@ -68,11 +67,16 @@
                     </div>
                     <div class="form-group">
                         <label>Shop’s email address</label>
-                        <input type="text" class="form-control" value=""/>
+                        <input type="text" class="form-control" value="hi@thegentlevet.sg"/>
                     </div>
                     <div class="form-group">
                         <label>Photo<span class="red">*</span></label>
                         <div class="upload-container">
+                            <div class="file-info">
+                                <img src="{{ asset('assets/img/admin/upload.svg') }}" alt="Preview">
+                                <span>bg-plan.png</span>
+                                <button class="remove-btn">Remove</button>
+                            </div>
                             <div class="upload-button">Upload file</div>
                             <input type="file" class="file-input" accept="image/*" required style="display: none;">
                         </div>
@@ -86,15 +90,15 @@
                         <label>Operating hours</label>
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="text flex left big"><span class="day">Mon</span> <input type="text" class="form-control" name="" required placeholder="9:30am–1pm, 2:30–8:30pm" required/></div>
-                                <div class="text flex left big"><span class="day">Tue</span> <input type="text" class="form-control" name="" required placeholder="9:30am–1pm, 2:30–8:30pm" required/></div>
-                                <div class="text flex left big"><span class="day">Wed</span> <input type="text" class="form-control" name="" required placeholder="9:30am–1pm, 2:30–8:30pm" required/></div>
-                                <div class="text flex left big"><span class="day">Thu</span> <input type="text" class="form-control" name="" required placeholder="9:30am–1pm, 2:30–8:30pm" required/></div>
+                                <div class="text flex left big"><span class="day">Mon</span> <input type="text" class="form-control" name="" required value="9:30am–1pm, 2:30–8:30pm" required/></div>
+                                <div class="text flex left big"><span class="day">Tue</span> <input type="text" class="form-control" name="" required value="9:30am–1pm, 2:30–8:30pm" required/></div>
+                                <div class="text flex left big"><span class="day">Wed</span> <input type="text" class="form-control" name="" required value="9:30am–1pm, 2:30–8:30pm" required/></div>
+                                <div class="text flex left big"><span class="day">Thu</span> <input type="text" class="form-control" name="" required value="9:30am–1pm, 2:30–8:30pm" required/></div>
                             </div>
                             <div class="col-md-6">
-                                <div class="text flex left big"><span class="day">Fri</span> <input type="text" class="form-control" name="" required placeholder="9:30am–1pm, 2:30–8:30pm" required/></div>
-                                <div class="text flex left big"><span class="day">Sat</span> <input type="text" class="form-control" name="" required placeholder="9:30am–1pm, 2:30–8:30pm" required/></div>
-                                <div class="text flex left big"><span class="day">Sun</span> <input type="text" class="form-control" name="" required placeholder="9:30am–1pm, 2:30–8:30pm" required/></div>
+                                <div class="text flex left big"><span class="day">Fri</span> <input type="text" class="form-control" name="" required value="9:30am–1pm, 2:30–8:30pm" required/></div>
+                                <div class="text flex left big"><span class="day">Sat</span> <input type="text" class="form-control" name="" required value="9:30am–1pm, 2:30–8:30pm" required/></div>
+                                <div class="text flex left big"><span class="day">Sun</span> <input type="text" class="form-control" name="" required value="9:30am–1pm, 2:30–8:30pm" required/></div>
                             </div>
                         </div>
                     </div>
@@ -103,14 +107,14 @@
                         <ul class="l-radio">
                             <li>
                                 <label class="css-radio">
-                                    <input type="radio" name="services" class="type-radio" value="24/7 Emergency">
+                                    <input type="radio" checked name="services" value="24/7 Emergency">
                                     <span class="checkmark"></span>
                                     <div class="text">24/7 Emergency</div>
                                 </label>
                             </li>
                             <li>
                                 <label class="css-radio">
-                                    <input type="radio" name="services" class="type-radio" value="Vet Specialist">
+                                    <input type="radio" name="services" value="Vet Specialist">
                                     <span class="checkmark"></span>
                                     <div class="text">Vet Specialist</div>
                                 </label>
@@ -119,16 +123,51 @@
                     </div>
                     <ul class="l-btn center mt50">
                         <li>
+                            <a class="bdr" data-coreui-toggle="modal" data-coreui-target="#deleteModal">Delete Vendor</a>
+                        </li>
+                        <li>
                             <a href="{{ URL::to('/admin/account-management/vendor/placeholder') }}">
                                 <button class="hvr-button white" type="button">Back</button>
                             </a>
                         </li>
                         <li>
-                            <button class="hvr-button" type="submit" disabled>Save</button>
+                            <button class="hvr-button" type="submit">Save</button>
                         </li>
                     </ul>
                 </form>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteModal" aria-labelledby="deleteModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <form action="{{ URL::to('/admin/account-management/vendor/placeholder') }}">
+                <div class="mb15">
+                    <div class="row row4">
+                        <div class="col-10 my-auto">
+                            <div class="t-pop">Delete Vendor</div>
+                        </div>
+                        <div class="col-2 my-auto text-end">
+                            <div class="close" data-coreui-dismiss="modal">
+                                <img src="{{ asset('assets/img/close.svg') }}" alt="" title="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bdy-pop">
+                    <p>Are you sure you want to delete Vendor? All details about the shop will be deleted permanently.</p>
+                </div>
+                <ul class="l-btn right">
+                    <li>
+                        <button class="hvr-button w120 white" data-coreui-dismiss="modal" type="button">Cancel</button>
+                    </li>
+                    <li>
+                        <button class="hvr-button w120" type="submit">Confirm</button>
+                    </li>
+                </ul>
+            </form>
         </div>
     </div>
 </div>
@@ -143,35 +182,8 @@
 
         $('.css-select select').select2({
             allowClear: true,
-            placeholder: "Select",
             minimumResultsForSearch: Infinity
         });
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const form = document.querySelector('form');
-        const inputs = form.querySelectorAll('input[required], select[required]');
-        const submitButton = form.querySelector('button[type="submit"]');
-
-        const checkRequiredFields = () => {
-            const allFilled = Array.from(inputs).every(input => {
-                if (input.type === 'radio') {
-                    return form.querySelector(`input[name="${input.name}"]:checked`) !== null;
-                }
-                return input.value.trim() !== '';
-            });
-
-            submitButton.disabled = !allFilled;
-        };
-        inputs.forEach(input => {
-            if (input.type === 'radio') {
-                const radios = form.querySelectorAll(`input[name="${input.name}"]`);
-                radios.forEach(radio => radio.addEventListener('change', checkRequiredFields));
-            } else {
-                input.addEventListener('input', checkRequiredFields);
-            }
-        });
-        checkRequiredFields();
     });
 
     const uploadButton = document.querySelector('.upload-button');

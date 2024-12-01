@@ -169,6 +169,12 @@ Route::get('admin/account-management/users', function () {
 Route::get('admin/account-management/pet-owners', function () {
     return view('admin.account-management.pet-owners.index');
 });
+Route::get('admin/account-management/pet-owners/view', function () {
+    return view('admin.account-management.pet-owners.view');
+});
+Route::get('admin/account-management/pet-owners/view2', function () {
+    return view('admin.account-management.pet-owners.view2');
+});
 
 /* Vendor */
 Route::get('admin/account-management/vendor/registered', function () {
@@ -202,6 +208,21 @@ Route::get('admin/account-management/vendor/placeholder/edit', function () {
 /* Appointments  */
 Route::get('admin/appointments/view', function () {
     return view('admin.appointments.view');
+});
+Route::get('admin/appointments/view/booked', function () {
+    return view('admin.appointments.booked');
+});
+Route::get('admin/appointments/view/completed', function () {
+    return view('admin.appointments.completed');
+});
+Route::get('admin/appointments/view/pending', function () {
+    return view('admin.appointments.pending');
+});
+Route::get('admin/appointments/view/cancelled', function () {
+    return view('admin.appointments.cancelled');
+});
+Route::get('admin/appointments/view/no-show', function () {
+    return view('admin.appointments.no-show');
 });
 
 /* Content Management  */
