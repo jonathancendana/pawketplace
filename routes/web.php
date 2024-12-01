@@ -241,6 +241,12 @@ Route::get('admin/content-management/advertisement/edit', function () {
 Route::get('admin/content-management/pet-cost-calculator', function () {
     return view('admin.content-management.pet-cost-calculator.index');
 });
+Route::get('admin/content-management/pet-cost-calculator/add', function () {
+    return view('admin.content-management.pet-cost-calculator.add');
+});
+Route::get('admin/content-management/pet-cost-calculator/edit', function () {
+    return view('admin.content-management.pet-cost-calculator.edit');
+});
 
 /* Symptom Checker */
 Route::get('admin/content-management/symptom-checker', function () {

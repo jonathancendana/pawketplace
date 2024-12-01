@@ -93,7 +93,7 @@
         padding: 8px 15px 7px 15px;
         min-width: 100px;
         &.w200 {
-            min-width: 160px;
+            min-width: 120px;
         }
     }
     .box-desc {
@@ -450,6 +450,41 @@
                     line-height: 17px;
                 }
             }
+        }
+    }
+    .category-group {
+        .services {
+            margin-top: 10px;
+            .service-group {
+                margin-bottom: 15px;
+                .resp10 {
+                    .form-control {
+                        margin-bottom: 10px;
+                    }
+                }
+                .delete-service {
+                    margin-right: 10px;
+                }
+                .add-service, .delete-service {
+                    padding: 0;
+                    border: 0;
+                    @include transition(all 0.3s);
+                    background: transparent;
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                    img {
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+    .link-global {
+        font-size: 13px;
+        line-height: 17px;
+        &:before {
+            bottom: 2px;
         }
     }
 }

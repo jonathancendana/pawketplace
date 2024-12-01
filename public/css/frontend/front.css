@@ -10844,12 +10844,15 @@ a {
   margin-bottom: 7px;
   display: flex;
 }
+.form-group .text.flex.left {
+  justify-content: left;
+}
 .form-group .text.flex.big .day {
-  width: 55px;
+  width: 60px;
   margin: auto;
 }
 .form-group .text.flex .day {
-  font-weight: bold;
+  font-family: "poppinsmedium";
   width: 45px;
 }
 .form-group .text .mb20 {
@@ -11992,11 +11995,11 @@ footer ul.l-soc li a:hover {
   padding-right: 4px;
 }
 
-.select {
+.css-select {
   position: relative;
   width: 100%;
 }
-.select::after {
+.css-select::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -12007,25 +12010,25 @@ footer ul.l-soc li a:hover {
   height: 24px;
   pointer-events: none;
 }
-.select .select2-container {
+.css-select .select2-container {
   width: 100% !important;
 }
-.select .select2-container .select2-selection--single {
+.css-select .select2-container .select2-selection--single {
   height: 40px;
   border: 1px solid #dcdcdc;
   border-radius: 8px;
 }
-.select .select2-container .select2-selection--single:focus {
+.css-select .select2-container .select2-selection--single:focus {
   border-color: #764BE2;
   box-shadow: 0 0 5px 4px #ECE8FF;
 }
-.select .select2-container .select2-selection--single .select2-selection__rendered {
+.css-select .select2-container .select2-selection--single .select2-selection__rendered {
   color: black;
   font-size: 14px;
   line-height: 20px;
   padding: 10px 30px 8px 15px;
 }
-.select .select2-selection__arrow, .select .select2-selection__clear, .select .select-options {
+.css-select .select2-selection__arrow, .css-select .select2-selection__clear, .css-select .select-options {
   display: none;
 }
 
@@ -12140,7 +12143,7 @@ ul.box-step {
   text-align: center;
 }
 ul.box-step li {
-  width: 185px;
+  width: 30%;
   display: inline-block;
 }
 ul.box-step li:last-child {
@@ -12340,6 +12343,112 @@ ul.l-pdf li a:hover {
   transform: rotate(45deg);
 }
 
+.upload-container {
+  line-height: 1;
+}
+.upload-container .upload-button {
+  border: 2px solid #764BE2;
+  font-weight: bold;
+  background: white;
+  color: #764BE2;
+  border-radius: 8px;
+  padding: 8px 20px 6px;
+  display: inline-block;
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+  bottom: 0;
+  letter-spacing: 0;
+  box-shadow: none;
+}
+.upload-container .upload-button:hover {
+  background: #ECE8FF;
+}
+.upload-container .file-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.upload-container .file-info img {
+  width: 22px;
+}
+.upload-container .file-info span {
+  font-size: 14px;
+  line-height: 20px;
+  position: relative;
+  color: #764BE2;
+}
+.upload-container .file-info span:before {
+  width: 100%;
+  height: 0.5px;
+  background: #764BE2;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  content: "";
+}
+.upload-container .remove-btn {
+  top: 1px;
+  color: #764BE2;
+  border: 0;
+  padding: 0;
+  background: white;
+  font-size: 14px;
+  line-height: 20px;
+  position: relative;
+  transition: all 0.3s;
+  font-weight: bold;
+  display: inline-block;
+}
+.upload-container .remove-btn:before {
+  content: "";
+  width: 100%;
+  height: 0.5px;
+  background: #764BE2;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+}
+.upload-container .remove-btn:hover {
+  color: #7F73E3;
+}
+
+.link-global {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  color: #764BE2;
+  font-size: 14px;
+  line-height: 20px;
+  transition: all 0.3s;
+  position: relative;
+}
+.link-global a {
+  color: #764BE2 !important;
+  transition: all 0.3s;
+}
+.link-global a:hover {
+  color: #7F73E3 !important;
+}
+.link-global:before {
+  width: 100%;
+  height: 0.5px;
+  background: #764BE2;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  content: "";
+}
+.link-global:hover {
+  color: #7F73E3;
+}
+
 @media (max-width: 1199px) {
   #main .auth {
     padding: 90px 0;
@@ -12394,10 +12503,6 @@ ul.l-pdf li a:hover {
   }
   #main .pad-contact {
     padding: 100px 0;
-  }
-
-  ul.box-step li {
-    width: 175px;
   }
 }
 @media (max-width: 991px) {
@@ -12752,10 +12857,6 @@ ul.l-pdf li a:hover {
   #main .box-select ul.l-select li a .nm {
     font-size: 15px;
     line-height: 22px;
-  }
-
-  ul.box-step li {
-    width: 179px;
   }
 }
 @media (max-width: 767px) {
@@ -13389,7 +13490,7 @@ ul.l-pdf li a:hover {
     line-height: 18px;
   }
 
-  .select .select2-container .select2-selection--single .select2-selection__rendered {
+  .css-select .select2-container .select2-selection--single .select2-selection__rendered {
     font-size: 13px;
     line-height: 18px;
   }
@@ -13399,6 +13500,28 @@ ul.l-pdf li a:hover {
     margin-bottom: 15px;
     font-size: 12px;
     line-height: 17px;
+  }
+
+  .upload-container .upload-button {
+    padding: 8px 15px 6px;
+    font-size: 13px;
+    line-height: 17px;
+  }
+  .upload-container .file-info {
+    gap: 5px;
+  }
+  .upload-container .file-info img {
+    width: 20px;
+  }
+  .upload-container .file-info span {
+    font-size: 12px;
+    line-height: 15px;
+    word-break: break-all;
+  }
+  .upload-container .remove-btn {
+    top: 1px;
+    font-size: 12px;
+    line-height: 15px;
   }
 }
 @media (max-width: 575px) {

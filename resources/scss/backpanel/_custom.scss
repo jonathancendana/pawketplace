@@ -1333,6 +1333,36 @@ ul.l-radio {
         }
     }
 }
+.table-pet {
+    margin-bottom: 50px;
+    .tbl {
+        &.tbl-hdr {
+            background: #F0F0F0;
+            font-weight: bold;
+        }
+        .cell {
+            font-size: 14px;
+            line-height: 20px;
+            padding: 15px 30px 15px 0;
+            border-bottom: 1px solid #DCDCDC;
+            &:first-child {
+                padding-left: 30px;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+            &.w15 {
+                width: 15%;
+            }
+            &.w24 {
+                width: 24%;
+            }
+            &.w63 {
+                width: 63%;
+            }
+        }
+    }
+}
 // ul.l-radio {
 //     margin: 0;
 //     padding: 0;

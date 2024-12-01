@@ -29,15 +29,15 @@
 										<label>Contact no.<span class="red">*</span></label>
 										<div class="row row4">
 											<div class="col-5">
-												<div class="select">
-													<select name="" id="" class="css-select">
+												<div class="css-select">
+													<select name="" id="">
 					                                    <option value="+65" selected>+65</option>
 					                                    <option value="+62">+62</option>
 					                                </select>
 					                            </div>
 											</div>
 											<div class="col-7">
-												<input class="form-control" type="text" name="" required />
+												<input class="form-control only-number" type="text" name="" required />
 											</div>
 										</div>
 										<div class="required">Please input a valid contact no.</div>
@@ -94,7 +94,7 @@
 
 		$('.box-menu').html('Pet Parent');
 
-		$('.css-select').select2({
+		$('.css-select select').select2({
             allowClear: true,
             minimumResultsForSearch: Infinity
         });

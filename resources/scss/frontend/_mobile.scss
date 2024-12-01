@@ -692,7 +692,7 @@
 			line-height: 18px;
 		}
 	}
-	.select {
+	.css-select {
 	    .select2-container {
 	        .select2-selection--single {
 	            .select2-selection__rendered {
@@ -708,4 +708,27 @@
         font-size: 12px;
         line-height: 17px;
     }
+    .upload-container {
+	    .upload-button {
+	        padding: 8px 15px 6px;
+	        font-size: 13px;
+	        line-height: 17px;
+	    }
+	    .file-info {
+	    	gap: 5px;
+	        img {
+	            width: 20px;
+	        }
+	        span {
+	            font-size: 12px;
+	            line-height: 15px;
+	            word-break: break-all;
+	        }
+	    }
+	    .remove-btn {
+	        top: 1px;
+	        font-size: 12px;
+	        line-height: 15px;
+	    }
+	}
 }

@@ -17770,3 +17770,32 @@ ul.l-radio li:last-child {
 .box2-pet ul.l-date li .box-status {
   font-size: 12px;
 }
+
+.table-pet {
+  margin-bottom: 50px;
+}
+.table-pet .tbl.tbl-hdr {
+  background: #F0F0F0;
+  font-weight: bold;
+}
+.table-pet .tbl .cell {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 15px 30px 15px 0;
+  border-bottom: 1px solid #DCDCDC;
+}
+.table-pet .tbl .cell:first-child {
+  padding-left: 30px;
+}
+.table-pet .tbl .cell:last-child {
+  padding-right: 0;
+}
+.table-pet .tbl .cell.w15 {
+  width: 15%;
+}
+.table-pet .tbl .cell.w24 {
+  width: 24%;
+}
+.table-pet .tbl .cell.w63 {
+  width: 63%;
+}

@@ -241,17 +241,24 @@ ul.l-radio {
     }
 }
 .link-global {
+    cursor: pointer;
     display: inline-block;
     font-weight: bold;
     color: $purple;
-    cursor: pointer;
     font-size: 14px;
     line-height: 20px;
     @include transition(all 0.3s);
     position: relative;
+    a {
+        color: $purple !important;
+        @include transition(all 0.3s);
+        &:hover {
+            color: $purple2 !important;
+        }
+    }
     &:before {
         width: 100%;
-        height: 1px;
+        height: 0.5px;
         background: $purple;
         position: absolute;
         bottom: 4px;
@@ -949,6 +956,9 @@ ul.pagination {
     }
     .form-group {
         margin-bottom: 20px;
+        &.mb0 {
+            margin-bottom: 0;
+        }
         &.slot {
             border-bottom: 1px solid #DCDCDC;
             padding-bottom: 10px;
@@ -1439,6 +1449,32 @@ ul.l-btn {
             font-size: 14px;
             line-height: 20px;
             min-width: 90px;
+        }
+    }
+}
+.category-group {
+    .mb5 {
+        margin-bottom: 5px;
+    }
+    .services {
+        margin-top: 10px;
+        .service-group {
+            margin-bottom: 8px;
+            .delete-service {
+                margin-right: 10px;
+            }
+            .add-service, .delete-service {
+                padding: 0;
+                border: 0;
+                @include transition(all 0.3s);
+                background: transparent;
+                &:hover {
+                    opacity: 0.7;
+                }
+                img {
+                    pointer-events: none;
+                }
+            }
         }
     }
 }

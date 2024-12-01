@@ -158,15 +158,15 @@
 							<label>Operating hours</label>
 							<div class="row">
 								<div class="col-md-6">
-									<div class="text flex"><span class="day">Mon</span> 9:30am–1pm, 2:30–8:30pm</div>
-									<div class="text flex"><span class="day">Tue</span> 9:30am–1pm, 2:30–8:30pm</div>
-									<div class="text flex"><span class="day">Wed</span> 9:30am–1pm, 2:30–8:30pm</div>
-									<div class="text flex"><span class="day">Thu</span> 9:30am–1pm, 2:30–8:30pm</div>
+									<div class="text flex left"><span class="day">Mon</span> 9:30am–1pm, 2:30–8:30pm</div>
+									<div class="text flex left"><span class="day">Tue</span> 9:30am–1pm, 2:30–8:30pm</div>
+									<div class="text flex left"><span class="day">Wed</span> 9:30am–1pm, 2:30–8:30pm</div>
+									<div class="text flex left"><span class="day">Thu</span> 9:30am–1pm, 2:30–8:30pm</div>
 								</div>
 								<div class="col-md-6">
-									<div class="text flex"><span class="day">Fri</span> 9:30am–1pm, 2:30–8:30pm</div>
-									<div class="text flex"><span class="day">Sat</span> 9:30am–1pm, 2:30–8:30pm</div>
-									<div class="text flex"><span class="day">Sun</span> 9:30am–1pm, 2:30–8:30pm</div>
+									<div class="text flex left"><span class="day">Fri</span> 9:30am–1pm, 2:30–8:30pm</div>
+									<div class="text flex left"><span class="day">Sat</span> 9:30am–1pm, 2:30–8:30pm</div>
+									<div class="text flex left"><span class="day">Sun</span> 9:30am–1pm, 2:30–8:30pm</div>
 								</div>
 							</div>
 						</div>

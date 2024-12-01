@@ -27,43 +27,17 @@
 						<div class="t1 mb20">Set up your shop in PawketPlace</div>
 						<div class="box-info-step">Is your shop already listed in <a href="#">PawketPlace’s list of shops</a>? If yes, please select your shop below, and we’ll verify the details.</div>
 						<form action="{{ URL::to('/vendor/step3') }}">
-							<div class="t-form">Individual’s details</div>
+							<div class="t-form">Company details</div>
+							<div class="form-group">
+								<label>Company name<span class="red">*</span></label>
+								<input class="form-control" type="text" name="" required />
+							</div>
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<label>Name<span class="red">*</span></label>
+										<label>UEN<span class="red">*</span></label>
 										<input class="form-control" type="text" name="" required />
 									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<label>NRIC/FIN<span class="red">*</span></label>
-										<input class="form-control" type="text" name="" required />
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<label>Individual’s email address<span class="red">*</span></label>
-										<input class="form-control" type="email" name="" required />
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-		                                <label>Individual’s contact no.<span class="red">*</span></label>
-		                                <div class="row row4">
-		                                    <div class="col-5">
-		                                        <div class="css-select">
-		                                            <select name="" id="">
-		                                                <option value="+65" selected>+65</option>
-		                                                <option value="+62">+62</option>
-		                                            </select>
-		                                        </div>
-		                                    </div>
-		                                    <div class="col-7">
-		                                        <input class="form-control only-number" type="text" name="" value="" required />
-		                                    </div>
-		                                </div>
-		                            </div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
@@ -96,6 +70,49 @@
 		                        	<div>Only PNG, JPG, and PDF files are accepted. Maximum file size: 2MB.</div>
 		                        </div>
 		                    </div>
+							<div class="form-group">
+								<label>Company address line 1<span class="red">*</span></label>
+								<input class="form-control" type="text" name="" required />
+							</div>
+							<div class="form-group">
+								<label>Company address line 2</label>
+								<input class="form-control" type="text" name=""/>
+							</div>
+							<div class="form-group">
+								<label>Postal code<span class="red">*</span></label>
+								<input class="form-control" type="text" name="" required />
+							</div>
+							<div class="t-form">Contact person’s details</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Contact person’s name<span class="red">*</span></label>
+										<input class="form-control" type="text" name="" required />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+		                                <label>Contact person’s contact no.<span class="red">*</span></label>
+		                                <div class="row row4">
+		                                    <div class="col-5">
+		                                        <div class="css-select">
+		                                            <select name="" id="">
+		                                                <option value="+65" selected>+65</option>
+		                                                <option value="+62">+62</option>
+		                                            </select>
+		                                        </div>
+		                                    </div>
+		                                    <div class="col-7">
+		                                        <input class="form-control only-number" type="text" name="" value="" required />
+		                                    </div>
+		                                </div>
+		                            </div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>Contact person’s email address<span class="red">*</span></label>
+								<input class="form-control" type="email" name="" required />
+							</div>
 							<ul class="l-btn center mt50">
 								<li>
 									<a href="{{ URL::to('/vendor/step1') }}">

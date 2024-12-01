@@ -1371,5 +1371,7 @@
     "/assets/img/admin/vaccination.svg": "/assets/img/admin/vaccination.svg",
     "/assets/img/admin/veterinary-visits.svg": "/assets/img/admin/veterinary-visits.svg",
     "/assets/img/admin/profile-cat.png": "/assets/img/admin/profile-cat.png",
-    "/assets/img/admin/profile-dog.png": "/assets/img/admin/profile-dog.png"
+    "/assets/img/admin/profile-dog.png": "/assets/img/admin/profile-dog.png",
+    "/assets/img/frontpanel/add.svg": "/assets/img/frontpanel/add.svg",
+    "/assets/img/frontpanel/delete.svg": "/assets/img/frontpanel/delete.svg"
 }

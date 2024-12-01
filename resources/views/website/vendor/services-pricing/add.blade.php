@@ -5,65 +5,114 @@
     <div class="container">
         <div class="title">Services & Pricing</div>
         <div class="row">
-            <div class="col-lg-9">
-                <!-- <div class="box-category">
-                    <div class="form-group">
-                        <label>Category</label>
-                        <input type="text" class="form-control w380" name="" placeholder="Category name"/>
-                        <div class="required">This field is required</div>
-                        <div class="category-container">
-                            <div class="services-row">
-                                <div class="services">
-                                    <div class="tbl tbl-services">
-                                        <div class="cell">
-                                            <input type="text" class="form-control" placeholder="Service"/>
+            <div class="col-xl-10">
+                <form acion="{{ URL::to('/vendor/services-pricing') }}">
+                    <div class="categories-container">
+                        <div class="category-group form-group">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4 my-auto">
+                                    <label>Category</label>
+                                    <input type="text" class="form-control" placeholder="Category name">
+                                </div>
+                            </div>
+                            <div class="services">
+                                <div class="service-group">
+                                    <div class="row">
+                                        <div class="col-md-6 my-auto resp10">
+                                            <input type="text" class="form-control" placeholder="Service">
                                         </div>
-                                        <div class="cell w170">
-                                            <input type="text" class="form-control" placeholder="$0 - $0"/>
+                                        <div class="col-8 col-md-4 my-auto">
+                                            <input type="text" class="form-control" placeholder="$0 - $0">
                                         </div>
-                                        <div class="cell w80">
-                                            <button class="delete-row" style="display: none;"><img src="{{ asset('assets/img/admin/delete-services.svg') }}" alt="" title=""/></button>
-                                            <button class="add-row"><img src="{{ asset('assets/img/admin/add.svg') }}" alt="" title=""/></button>
+                                        <div class="col-4 col-md-2 my-auto">
+                                            <button type="button" class="add-service"><img src="{{ asset('assets/img/frontpanel/add.svg') }}"></button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="link-global">Add another category</div>
-                <ul class="l-btn right mt50">
-                    <li>
-                        <a href="#">
-                            <button type="button" class="hvr-button white w200">Cancel</button>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <button type="submit" class="hvr-button w200">Save Changes</button>
-                        </a>
-                    </li>
-                </ul> -->
-                <div id="categories-container">
-                    <div class="category-group">
-                        <label>Category</label>
-                        <input type="text" class="category-name" placeholder="Category name">
-                        <div class="services">
-                            <div class="service-group">
-                                <input type="text" class="service-name" placeholder="Service">
-                                <input type="text" class="service-price" placeholder="$0 - $0">
-                                <button type="button" class="add-service">+</button>
-                            </div>
-                        </div>
+                    <div class="link-global">
+                        <a class="add-category">Add another category</a>
                     </div>
-                </div>
-                <button type="button" id="add-category">Add another category</button>
-                <button type="button">Cancel</button>
-                <button type="button">Save changes</button>
+                    <ul class="l-btn right mt50">
+                        <li>
+                            <button class="hvr-button w200 white" type="button">Cancel</button>
+                        </li>
+                        <li>
+                            <button class="hvr-button w200" data-coreui-toggle="modal" data-coreui-target="#saveModal" type="button">Save changes</button>
+                        </li>
+                    </ul>
+                </form>
             </div>
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="saveModal" tabindex="-1" aria-labelledby="saveModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <form action="{{ URL::to('/vendor/services-pricing/view') }}">
+                <div class="mb15">
+                    <div class="row row4">
+                        <div class="col-10 my-auto">
+                            <div class="t-pop">Save changes</div>
+                        </div>
+                        <div class="col-2 my-auto text-end">
+                            <div class="close" data-coreui-dismiss="modal">
+                                <img src="{{ asset('assets/img/close.svg') }}" alt="" title="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bdy-pop">
+                    <p>Are you sure you want to save changes? Once saved, content will be published on the website.</p>
+                </div>
+                <ul class="l-btn right">
+                    <li>
+                        <button class="hvr-button w120 white" data-coreui-dismiss="modal" type="button">Cancel</button>
+                    </li>
+                    <li>
+                        <button class="hvr-button w120" type="submit">Save</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <form>
+                <div class="mb15">
+                    <div class="row row4">
+                        <div class="col-10 my-auto">
+                            <div class="t-pop">Delete category</div>
+                        </div>
+                        <div class="col-2 my-auto text-end">
+                            <div class="close" data-coreui-dismiss="modal">
+                                <img src="{{ asset('assets/img/close.svg') }}" alt="" title="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bdy-pop">
+                    <p>Are you sure you want to delete this category? All listed services and price range in that category will be deleted as well.</p>
+                </div>
+                <ul class="l-btn right">
+                    <li>
+                        <button class="hvr-button w120 white" data-coreui-dismiss="modal" type="button">Cancel</button>
+                    </li>
+                    <li>
+                        <button id="confirmDeleteCategory" class="hvr-button w120" type="button">Confirm</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+
 @endsection
 
 @section('scripts')
@@ -72,79 +121,88 @@
         $('.nav-group-services a').addClass('active');
     });
 
-    document.addEventListener("DOMContentLoaded", function () {
-        const categoriesContainer = document.getElementById("categories-container");
-        const addCategoryButton = document.getElementById("add-category");
-        function createServiceElement(isFirstService = false) {
-            const serviceGroup = document.createElement("div");
-            serviceGroup.classList.add("service-group");
-            if (isFirstService) {
-                serviceGroup.innerHTML = `
-                    <input type="text" class="service-name" placeholder="Service">
-                    <input type="text" class="service-price" placeholder="$0 - $0">
-                `;
-            } else {
-                serviceGroup.innerHTML = `
-                    <input type="text" class="service-name" placeholder="Service">
-                    <input type="text" class="service-price" placeholder="$0 - $0">
-                    <button type="button" class="add-service">+</button>
-                    <button type="button" class="delete-service">🗑</button>
-                `;
+    document.addEventListener('click', (e) => {
+        const categoriesContainer = document.querySelector('.categories-container');
 
-                const addServiceButton = serviceGroup.querySelector(".add-service");
-                addServiceButton.addEventListener("click", () => {
-                    const serviceContainer = serviceGroup.parentElement;
-                    serviceContainer.appendChild(createServiceElement());
-                });
-
-                const deleteServiceButton = serviceGroup.querySelector(".delete-service");
-                deleteServiceButton.addEventListener("click", () => {
-                    serviceGroup.remove();
-                });
-            }
-            return serviceGroup;
-        }
-        function createCategoryElement() {
-            const categoryGroup = document.createElement("div");
-            categoryGroup.classList.add("category-group");
-
-            categoryGroup.innerHTML = `
-                <label>Category</label>
-                <input type="text" class="category-name" placeholder="Category name">
-                <div class="services">
-                    <div class="service-group">
-                        <input type="text" class="service-name" placeholder="Service">
-                        <input type="text" class="service-price" placeholder="$0 - $0">
-                        <button type="button" class="add-service">+</button>
+        if (e.target.matches('.add-category')) {
+            categoriesContainer.insertAdjacentHTML(
+                'beforeend',
+                `
+                <div class="category-group form-group">
+                    <div class="mb5">
+                        <div class="row">
+                            <div class="col-6 my-auto">
+                                <label class="mb0">Category</label>
+                            </div>
+                            <div class="col-6 my-auto text-end">
+                                <div class="link-global">
+                                    <a class="delete-category">Delete Category</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <a href="#" class="delete-category">Delete category</a>
-            `;
-
-            const servicesContainer = categoryGroup.querySelector(".services");
-            const deleteCategoryButton = categoryGroup.querySelector(".delete-category");
-            const addServiceButton = categoryGroup.querySelector(".add-service");
-
-            addServiceButton.addEventListener("click", () => {
-                servicesContainer.appendChild(createServiceElement());
-            });
-
-            deleteCategoryButton.addEventListener("click", (e) => {
-                e.preventDefault();
-                categoryGroup.remove();
-            });
-            return categoryGroup;
+                    <div class="row">
+                        <div class="col-md-6 my-auto">
+                            <input type="text" class="form-control" placeholder="Category name">
+                        </div>
+                    </div>
+                    <div class="services">
+                        <div class="service-group">
+                            <div class="row">
+                                <div class="col-md-6 my-auto resp10">
+                                    <input type="text" class="form-control" placeholder="Service">
+                                </div>
+                                <div class="col-8 col-md-4 my-auto">
+                                    <input type="text" class="form-control" placeholder="$0 - $0">
+                                </div>
+                                <div class="col-4 col-md-2 my-auto">
+                                    <button type="button" class="add-service"><img src="{{ asset('assets/img/frontpanel/add.svg') }}"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`
+            );
+        } else if (e.target.matches('.delete-category')) {
+            categoryToDelete = e.target.closest('.category-group');
+            new coreui.Modal(document.getElementById('deleteModal')).show();
+        } else if (e.target.matches('.add-service')) {
+            const services = e.target.closest('.services');
+            services.querySelectorAll('.add-service').forEach((btn) => btn.remove());
+            services.insertAdjacentHTML(
+                'beforeend',
+                `<div class="service-group">
+                    <div class="row">
+                        <div class="col-md-6 my-auto resp10">
+                            <input type="text" class="form-control" placeholder="Service">
+                        </div>
+                        <div class="col-8 col-md-4 my-auto">
+                            <input type="text" class="form-control" placeholder="$0 - $0">
+                        </div>
+                        <div class="col-4 col-md-2 my-auto">
+                            <button type="button" class="delete-service"><img src="{{ asset('assets/img/frontpanel/delete.svg') }}"></button>
+                            <button type="button" class="add-service"><img src="{{ asset('assets/img/frontpanel/add.svg') }}"></button>
+                        </div>
+                    </div>
+                </div>`
+            );
+        } else if (e.target.matches('.delete-service')) {
+            const services = e.target.closest('.services');
+            e.target.closest('.service-group').remove();
+            const lastServiceGroup = services.querySelector('.service-group:last-child');
+            if (lastServiceGroup && !lastServiceGroup.querySelector('.add-service')) {
+                lastServiceGroup.querySelector('.col-md-2').insertAdjacentHTML(
+                    'beforeend',
+                    `<button type="button" class="add-service"><img src="{{ asset('assets/img/frontpanel/add.svg') }}"></button>`
+                );
+            }
         }
-        addCategoryButton.addEventListener("click", () => {
-            categoriesContainer.appendChild(createCategoryElement());
-        });
-
-        const initialAddServiceButton = categoriesContainer.querySelector(".add-service");
-        initialAddServiceButton.addEventListener("click", () => {
-            const initialServicesContainer = categoriesContainer.querySelector(".services");
-            initialServicesContainer.appendChild(createServiceElement());
-        });
     });
 
+    document.getElementById('confirmDeleteCategory').addEventListener('click', () => {
+        categoryToDelete?.remove();
+        categoryToDelete = null;
+        coreui.Modal.getInstance(document.getElementById('deleteModal')).hide();
+    });
 </script>
 @endsection
