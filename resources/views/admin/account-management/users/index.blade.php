@@ -7,9 +7,96 @@
 @section('content')
 <div class="pad-content">
     <div class="container">
-        <div class="title">Users</div>
-        <a data-coreui-toggle="modal" data-coreui-target="#addModal">add</a>
-        <a data-coreui-toggle="modal" data-coreui-target="#editModal">edit</a>
+        <div class="row">
+            <div class="col-md-5 my-auto">
+                <div class="title mb0">Admin Users</div>
+            </div>
+            <div class="col-md-7 my-auto">
+                <ul class="l-btn right">
+                    <li>
+                        <a data-coreui-toggle="modal" data-coreui-target="#addModal">
+                            <button class="hvr-button" type="button">Create Admin User</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="search m30">
+            <input type="text" class="form-control" placeholder="Search Name, Role" />
+            <div class="abs"><img src="{{ asset('assets/img/admin/search.svg') }}" alt="Search Icon" title=""/></div>
+        </div>
+        <div class="css-table">
+            <table class="table">
+                <thead>
+                    <tr class="align-middle">
+                        <th>UID</th>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Designation</th>
+                        <th>Contact no.</th>
+                        <th>Action(s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="align-middle">
+                        <td>A01</td>
+                        <td>David Lim</td>
+                        <td>
+                            <div class="box-status grey">Admin</div>
+                        </td>
+                        <td>Operations Specialist</td>
+                        <td>+65 9876 5432</td>
+                        <td>
+                            <div class="link-global">
+                                <a data-coreui-toggle="modal" data-coreui-target="#editModal">Edit details</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="align-middle">
+                        <td>A02</td>
+                        <td>Jerome Tan</td>
+                        <td>
+                            <div class="box-status green">Super Admin</div>
+                        </td>
+                        <td>OperaMarketing Manager</td>
+                        <td>+65 9123 1233</td>
+                        <td>
+                            <div class="link-global">
+                                <a data-coreui-toggle="modal" data-coreui-target="#editModal">Edit details</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="align-middle">
+                        <td>A01</td>
+                        <td>David Lim</td>
+                        <td>
+                            <div class="box-status grey">Admin</div>
+                        </td>
+                        <td>Operations Specialist</td>
+                        <td>+65 9876 5432</td>
+                        <td>
+                            <div class="link-global">
+                                <a data-coreui-toggle="modal" data-coreui-target="#editModal">Edit details</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="align-middle">
+                        <td>A02</td>
+                        <td>Jerome Tan</td>
+                        <td>
+                            <div class="box-status green">Super Admin</div>
+                        </td>
+                        <td>OperaMarketing Manager</td>
+                        <td>+65 9123 1233</td>
+                        <td>
+                            <div class="link-global">
+                                <a data-coreui-toggle="modal" data-coreui-target="#editModal">Edit details</a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 
@@ -240,6 +327,14 @@
         $('.css-select select').select2({
             allowClear: true,
             minimumResultsForSearch: Infinity
+        });
+
+        var table = $('.table').DataTable({
+            ordering: false,
+            lengthChange: false,
+            searching: false,
+            info: false,
+            paging: false,
         });
     });
 
