@@ -14,7 +14,7 @@
                             <div class="title mb0">Appointment details</div>
                         </div>
                         <div class="col-md-6 my-auto text-end">
-                            <div class="box-status grey">Cancelled</div>
+                            <div class="box-status light-grey">Cancelled</div>
                         </div>
                     </div>
                 </div>

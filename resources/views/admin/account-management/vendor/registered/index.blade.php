@@ -12,13 +12,9 @@
                 <a href="{{ URL::to('/admin/account-management/vendor/placeholder') }}">Placeholder</a>
             </li>
         </ul>
-        <div>
-            <form>
-                <div class="search">
-                    <input type="text" class="form-control" name="" placeholder="Search ID, Pet Owner or Contact No." />
-                    <div class="abs"><img src="{{ asset('assets/img/admin/search.svg') }}" alt="" title=""/></div>
-                </div>
-            </form>
+        <div class="search">
+            <input type="text" class="form-control" name="" placeholder="Search ID, Pet Owner or Contact No." />
+            <div class="abs"><img src="{{ asset('assets/img/admin/search.svg') }}" alt="" title=""/></div>
         </div>
         <div class="css-table mt30">
             <div class="result">
@@ -200,7 +196,7 @@
             lengthChange: false,
             info: false,
             paging: true,
-            langustatus: {
+            language: {
                 paginate: {
                     previous: `<img src="{{ asset('assets/img/admin/pagination-left.svg') }}" />`,
                     next: `<img src="{{ asset('assets/img/admin/pagination-right.svg') }}" />`,

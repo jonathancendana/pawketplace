@@ -16567,7 +16567,7 @@ a {
   color: #EF3A5D;
 }
 
-.form-control:disabled, .form-control[readonly] {
+.form-control:disabled {
   background: transparent;
   cursor: no-drop;
 }
@@ -17532,6 +17532,10 @@ ul.l-radio li:last-child {
   color: #764BE2;
   background: #ECE8FF;
 }
+.box-status.light-grey {
+  color: #6C6C6C;
+  background: #F0F0F0;
+}
 
 .box-audit {
   margin-top: 30px;
@@ -17993,4 +17997,245 @@ ul.pagination li a.page-link:hover {
   top: 48%;
   left: 12px;
   transform: translateY(-50%);
+}
+
+.ui-datepicker-calendar .ui-state-default {
+  border: 1px solid white;
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  line-height: 35px;
+  border-radius: 50%;
+}
+.ui-datepicker-calendar .ui-state-default:hover {
+  border-color: #D8D5E2;
+}
+.ui-datepicker-calendar .ui-state-default.ui-state-highlight {
+  background: #f7f7f7;
+  border-color: #f7f7f7;
+}
+.ui-datepicker-calendar .ui-state-default.ui-state-active {
+  border-color: #764BE2;
+  background: #764BE2;
+  color: white;
+}
+
+.ui-datepicker {
+  padding: 10px;
+  width: 300px;
+  box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.15);
+  border: 0;
+  z-index: 9999 !important;
+  border-radius: 0;
+}
+.ui-datepicker select.ui-datepicker-month {
+  width: 68px;
+}
+.ui-datepicker select.ui-datepicker-year {
+  width: 75px;
+}
+.ui-datepicker .ui-datepicker-month, .ui-datepicker .ui-datepicker-year {
+  text-align: center;
+  color: black;
+  border-radius: 6px;
+  background: white !important;
+  font-size: 12px;
+  font-weight: normal;
+  border: 1px solid #9A99AB;
+}
+.ui-datepicker .ui-datepicker-year {
+  background: transparent;
+}
+.ui-datepicker .ui-datepicker-title select {
+  font-size: 14px;
+  margin: 0 5px 0 0;
+  padding: 7px 10px;
+}
+.ui-datepicker .ui-datepicker-prev {
+  cursor: pointer;
+  width: 8px;
+  height: 12px;
+  border: 0;
+  background-color: transparent;
+  left: 10px;
+  top: 10px;
+}
+.ui-datepicker .ui-datepicker-prev span {
+  background: url(/images/calendar-left.webp?c38c5b39bcf2f0bb776743c53e98a512) no-repeat;
+  width: 8px;
+  height: 12px;
+  left: 0;
+  top: 5px;
+  margin: 0;
+}
+.ui-datepicker .ui-datepicker-next {
+  cursor: pointer;
+  width: 8px;
+  height: 12px;
+  border: 0;
+  background-color: transparent;
+  right: 10px;
+  top: 10px;
+}
+.ui-datepicker .ui-datepicker-next span {
+  background: url(/images/calendar-right.webp?40cd22e44aff63761eb0241225bc1ad2) no-repeat;
+  width: 8px;
+  height: 12px;
+  left: 0;
+  top: 5px;
+  margin: 0;
+}
+.ui-datepicker .ui-widget-header {
+  border: 0;
+  background-color: white;
+}
+.ui-datepicker .ui-widget.ui-widget-content {
+  border-radius: 0;
+  border-color: black;
+}
+.ui-datepicker th {
+  border: 0;
+  color: black;
+  opacity: 0.5;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: white;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+  text-align: center;
+  font-size: 14px;
+  color: black;
+}
+
+.css-date {
+  position: relative;
+}
+.css-date.time .form-control[readonly] {
+  background: white;
+}
+.css-date.calender-from-to {
+  width: 100%;
+  border-radius: 38px;
+  border: 1px solid #D8D5E2;
+}
+.css-date.calender-from-to .input-img {
+  left: 15px;
+  right: inherit;
+}
+.css-date.calender-from-to .input-img img {
+  position: relative;
+  top: -1px;
+  width: 20px;
+}
+.css-date.calender-from-to ul {
+  margin: 0;
+  padding: 0 0 0 45px;
+}
+.css-date.calender-from-to ul li {
+  display: inline-block;
+}
+.css-date.calender-from-to ul li.to {
+  margin-right: 5px;
+  position: relative;
+  top: 1px;
+}
+.css-date.calender-from-to ul li .form-control {
+  width: 85px;
+  padding-right: 0;
+  padding-left: 0;
+  border: 0 !important;
+  background: transparent;
+  border-radius: 0 !important;
+}
+.css-date.calender-from-to ul li .form-control:focus {
+  box-shadow: none;
+}
+.css-date.calender-from-to ul li .form-control::-moz-placeholder {
+  font-size: 13px;
+}
+.css-date.calender-from-to ul li .form-control:-ms-input-placeholder {
+  font-size: 13px;
+}
+.css-date.calender-from-to ul li .form-control::placeholder {
+  font-size: 13px;
+}
+.css-date.calender-from-to ul li .form-control:-ms-input-placeholder {
+  font-size: 13px;
+}
+.css-date.calender-from-to ul li .form-control::-ms-input-placeholder {
+  font-size: 13px;
+}
+.css-date .date-core .form-control {
+  border: 1px solid #D8D5E2 !important;
+  color: black;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 11px 15px 9px;
+  border-radius: 8px !important;
+}
+.css-date .date-core .form-control:focus {
+  box-shadow: 0 0 5px 4px #EDF5FF;
+  border-color: #764BE2 !important;
+}
+.css-date .date-core .input-group-text {
+  display: none;
+}
+.css-date .date-core .calendars .calendar-nav {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.css-date .date-core .calendars .calendar-nav .calendar-nav-date.btn:hover {
+  color: #764BE2;
+}
+.css-date .date-core .calendars .calendar-nav .calendar-nav-date .btn-month {
+  padding-right: 0;
+}
+.css-date .date-core .calendars .calendar-nav .calendar-nav-date .btn-year {
+  padding-left: 0;
+}
+.css-date .date-core .calendars table {
+  font-size: 14px;
+  color: black;
+}
+.css-date .date-core .calendars table thead .calendar-cell .calendar-header-cell-inner {
+  font-weight: normal;
+  color: black;
+}
+.css-date .date-core .calendars table tbody .calendar-cell {
+  padding: 2px;
+}
+.css-date .date-core .calendars table tbody .calendar-cell .calendar-cell-inner {
+  border-radius: 50%;
+  border: 1px solid transparent;
+  height: 40px;
+}
+.css-date .date-core .calendars table tbody .calendar-cell.selected:not(.previous):not(.next) .calendar-cell-inner {
+  background: #764BE2;
+  border-color: #764BE2;
+}
+.css-date .date-core .calendars table tbody .calendar-cell:hover:not(.disabled) .calendar-cell-inner {
+  background-color: transparent;
+  border-color: #D8D5E2;
+}
+.css-date .input-img {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  z-index: 10;
+}
+.css-date .input-img img {
+  width: 22px;
+}
+.css-date .form-control.date {
+  border: 1px solid #D8D5E2 !important;
+  color: black;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 11px 15px 9px;
+  border-radius: 8px !important;
+}
+.css-date .form-control.date:focus {
+  border-color: #764BE2 !important;
 }

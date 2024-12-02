@@ -252,6 +252,12 @@ Route::get('admin/content-management/pet-cost-calculator/edit', function () {
 Route::get('admin/content-management/symptom-checker', function () {
     return view('admin.content-management.symptom-checker.index');
 });
+Route::get('admin/content-management/symptom-checker/add', function () {
+    return view('admin.content-management.symptom-checker.add');
+});
+Route::get('admin/content-management/symptom-checker/edit', function () {
+    return view('admin.content-management.symptom-checker.edit');
+});
 
 /* FAQ */
 Route::get('admin/content-management/faq', function () {
