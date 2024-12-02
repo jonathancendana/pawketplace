@@ -9,6 +9,16 @@
             <div class="abs"><img src="{{ asset('assets/img/admin/search.svg') }}" alt="Search Icon" title=""/></div>
         </div>
         <div class="css-table">
+            <div class="result">
+                <ul>
+                    <li>
+                        <div id="resultsCount">X results found</div>
+                    </li>
+                    <li>
+                        <div class="link-global" id="resetButton">Reset</div>
+                    </li>
+                </ul>
+            </div>
             <table class="table">
                 <thead>
                     <tr class="align-middle">
@@ -180,7 +190,6 @@
         var table = $('.table').DataTable({
             ordering: false,
             lengthChange: false,
-            searching: false,
             info: false,
             paging: true,
             language: {
@@ -189,6 +198,20 @@
                     next: `<img src="{{ asset('assets/img/admin/pagination-right.svg') }}" />`,
                 }
             },
+        });
+
+        $('.search .form-control').on('input', function () {
+            const value = $(this).val().trim();
+            const count = table.search(value).draw().rows({ filter: 'applied' }).count();
+
+            $('.result').toggle(value !== '');
+            $('#resultsCount').text(`${count} results found`);
+        });
+
+        $('#resetButton').on('click', function () {
+            table.search('').draw();
+            $('.search .form-control').val('');
+            $('.result').hide();
         });
         $('.dataTables_wrapper .row .col-md-5:empty').remove();
         $('.dataTables_wrapper .row .col-md-7').removeClass('col-md-7').addClass('col-sm-12');
